@@ -1,0 +1,81 @@
+---
+import Container from "./Container.astro";
+const stats = {
+  title: "+650 Casos en LATAM",
+  content:
+    "Aquí puedes colocar alguna información relevante o estadísticas importantes.",
+};
+---
+
+<Container>
+  <div class="feedback-container mx-auto my-12 p-6 max-w-4xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="stats p-6 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-4 text-white">{stats.title}</h2>
+        <p class="text-lg text-gray-700">{stats.content}</p>
+      </div>
+      <div class="feedback-form bg-white p-6 rounded-lg shadow-lg">
+        <form
+          data-netlify="true"
+          netlify-honeypot
+          name="feedback"
+          method="POST"
+          action="/success"
+        >
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
+          <input type="hidden" name="form-name" value="feedback" />
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Nombre Completo</label
+            >
+            <input
+              id="name"
+              type="text"
+              name="name"
+              class="mt-1 block w-full p-3 border rounded-md"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              class="mt-1 block w-full p-3 border rounded-md"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              for="feedback"
+              class="block text-sm font-medium text-gray-700"
+              >Contanos tu caso brevemente</label
+            >
+            <textarea
+              id="feedback"
+              wrap="soft"
+              name="feedback"
+              required
+              class="mt-1 block w-full p-3 border rounded-md"></textarea>
+          </div>
+        </form>
+        <div class="mt-12 lg:mt-0">
+          <a
+            href="#"
+            class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+          >
+            <span class="relative text-sm font-semibold text-white"
+              >Contactanos</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Container>
