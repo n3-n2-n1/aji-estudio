@@ -1,15 +1,38 @@
 ---
 import Layout from "./Layout.astro";
+import Container from "../components/Container.astro";
+import FormContaxt from "../components/FormContaxt.astro";
 
-// src/layouts/InformativePage.astro
 const { title, description, features } = Astro.props;
 ---
 <Layout>
-  <h1>{title}</h1>
-  <p>{description}</p>
-  <ul>
-    {features.map((feature) => (
-      <li>{feature}</li>
-    ))}
-  </ul>
+  <!-- Header Section -->
+  <section class="bg-gray-50 dark:bg-gray-900 px-6 md:py-20 pt-16">
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-5xl font-extrabold text-gray-800 dark:text-white mb-10">
+        {title}
+      </h1>
+      <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-300 mb-12">
+        {description}
+      </p>
+    </div>
+  </section>
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-white dark:bg-gray-900">
+    <Container>
+      <div class="md:w-2/3 lg:w-1/2 mb-12 mx-auto text-center">
+        <svg width="32px" height="32px" fill="currentColor" viewBox="0 0 24 24" class="mx-auto mb-6 text-gray-700 dark:text-white">
+          <path d="M2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C11.5858 21.25 11.25 21.5858 11.25 22C11.25 22.4142 11.5858 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 12.4142 1.58579 12.75 2 12.75C2.41421 12.75 2.75 12.4142 2.75 12Z"/>
+          <path d="M5 12.25C4.58579 12.25 4.25 12.5858 4.25 13C4.25 13.4142 4.58579 13.75 5 13.75H9.18934L2.46967 20.4697C2.17678 20.7626 2.17678 21.2374 2.46967 21.5303C2.76256 21.8232 3.23744 21.8232 3.53033 21.5303L10.25 14.8107V19C10.25 19.4142 10.5858 19.75 11 19.75C11.4142 19.75 11.75 19.4142 11.75 19V13C11.75 12.5858 11.4142 12.25 11 12.25H5Z"/>
+        </svg>
+        <h2 class="text-3xl font-bold text-gray-700 dark:text-white md:text-4xl mb-6">
+          Seguros
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ad ipsum pariatur autem, fugit laborum in atque amet obcaecati? Nisi minima aspernatur, quidem nulla cupiditate nam consequatur eligendi magni adipisci.
+        </p>
+      </div>
+    </Container>
+    <FormContaxt />
+  </section>
 </Layout>
