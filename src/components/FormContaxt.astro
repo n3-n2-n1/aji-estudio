@@ -1,0 +1,93 @@
+---
+import Container from "./Container.astro";
+const stats = {
+  title: "+650 Casos en LATAM",
+  head: "Contactanos",
+  feature2: "+12 empresas aseguradas",
+  features: "+15 años de trayectoria",
+  content:
+    "Comentanos tu caso y un representante de nuestro equipo te contactará a la brevedad.",
+};
+---
+
+<Container>
+  <div class="feedback-container mx-auto mt-8 p-6 max-w-4xl">
+    <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl pl-8">
+      Contactanos
+    </h2>
+    <div class="md:w-2/3 lg:w-1/2">
+      <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C11.5858 21.25 11.25 21.5858 11.25 22C11.25 22.4142 11.5858 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 12.4142 1.58579 12.75 2 12.75C2.41421 12.75 2.75 12.4142 2.75 12Z" fill="#ffffff"></path> <path d="M5 12.25C4.58579 12.25 4.25 12.5858 4.25 13C4.25 13.4142 4.58579 13.75 5 13.75H9.18934L2.46967 20.4697C2.17678 20.7626 2.17678 21.2374 2.46967 21.5303C2.76256 21.8232 3.23744 21.8232 3.53033 21.5303L10.25 14.8107V19C10.25 19.4142 10.5858 19.75 11 19.75C11.4142 19.75 11.75 19.4142 11.75 19V13C11.75 12.5858 11.4142 12.25 11 12.25H5Z" fill="#ffffff"></path> </g></svg>
+
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="stats p-6">
+        <h2 class="text-3xl font-bold text-black dark:text-white">{stats.title}</h2>
+        <h2 class="text-2xl font-bold text-primary dark:text-white">{stats.features}</h2>
+        <h2 class="text-2xl font-bold mb-2 text-black dark:text-white">{stats.feature2}</h2>
+        <p class="text-lg text-gray-600">{stats.content}</p>
+      </div>
+      <div class="feedback-form bg-white p-6 rounded-lg shadow-lg">
+        <form
+          data-netlify="true"
+          netlify-honeypot
+          name="feedback"
+          method="POST"
+          action="/success"
+        >
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
+          <input type="hidden" name="form-name" value="feedback" />
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Nombre Completo</label
+            >
+            <input
+              id="name"
+              type="text"
+              name="name"
+              class="mt-1 block w-full p-3 border rounded-md"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              class="mt-1 block w-full p-3 border rounded-md"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              for="feedback"
+              class="block text-sm font-medium text-gray-700"
+              >Contanos tu caso brevemente</label
+            >
+            <textarea
+              id="feedback"
+              wrap="soft"
+              name="feedback"
+              required
+              class="mt-1 block w-full p-3 border rounded-md"></textarea>
+          </div>
+        </form>
+        <div class="mt-12 lg:mt-0">
+          <a
+            href="#"
+            class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+          >
+            <span class="relative text-sm font-semibold text-white"
+              >Contactanos</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Container>

@@ -1,0 +1,12 @@
+---
+// src/pages/automoviles.astro
+import InformativePage from '../layouts/InformativePage.astro';
+
+const pageData = {
+  title: "Seguros para Automóviles",
+  description: "Protección completa para tu vehículo.",
+  features: ["Cobertura total", "Asistencia en carretera", "Protección contra robo"],
+};
+
+---
+<InformativePage {...pageData} />

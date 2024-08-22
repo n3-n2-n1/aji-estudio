@@ -1,0 +1,57 @@
+---
+import Container from "./Container.astro";
+---
+
+<footer class="py-20 md:py-40">
+  <Container>
+    <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
+      <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
+        <div
+          class="flex w-full justify-center space-x-12 text-gray-600 dark:text-gray-300 sm:w-7/12 md:justify-start"
+        >
+          <ul class="list-inside list-disc space-y-8">
+            <li><a href="#" class="transition hover:text-primary">Inicio</a></li>
+            <li>
+              <a href="#" class="transition hover:text-primary">ART</a>
+            </li>
+            <li>
+              <a href="#" class="transition hover:text-primary">Seguros</a>
+            </li>
+            <li>
+              <a href="#" class="transition hover:text-primary">Mala Praxis</a>
+            </li>
+            <li>
+              <a href="#" class="transition hover:text-primary">Sucesiones</a>
+            </li>
+          </ul>
+
+
+        </div>
+        <div
+          class="m-auto mt-16 w-10/12 space-y-6 text-center sm:mt-auto sm:w-5/12 sm:text-left"
+        >
+
+          <span class="block text-gray-500 dark:text-gray-400"
+            >AIJ 2024 &copy; <span id="year"></span></span
+          >
+
+          <span class="flex justify-around text-gray-600 dark:text-white">
+            <a href="#" class="font-medium">Terminos de Uso </a>
+            <a href="#" class="font-medium"> Politica de Privacidad</a>
+          </span>
+          <a
+              href="#"
+              class="font-semibold text-gray-600 dark:text-white"
+            >
+              Contactanos</a
+            >
+            <span class="block text-gray-500 dark:text-gray-400"
+            >Powered by Vincere</span
+          >
+
+          
+        </div>
+      </div>
+    </div>
+  </Container>
+</footer>

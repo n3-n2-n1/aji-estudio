@@ -1,0 +1,15 @@
+---
+import Layout from "./Layout.astro";
+
+// src/layouts/InformativePage.astro
+const { title, description, features } = Astro.props;
+---
+<Layout>
+  <h1>{title}</h1>
+  <p>{description}</p>
+  <ul>
+    {features.map((feature) => (
+      <li>{feature}</li>
+    ))}
+  </ul>
+</Layout>
