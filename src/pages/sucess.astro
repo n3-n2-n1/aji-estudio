@@ -3,8 +3,20 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Gracias por Contactarnos | Nombre del Sitio">
-  <div class="text-center mt-40">
-    <h1 class="text-3xl font-bold text-gray-800 dark:text-white">¡Gracias por contactarnos!</h1>
-    <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Nos pondremos en contacto contigo lo antes posible.</p>
+  <div class="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 px-6 py-12">
+    <div class="max-w-xl text-center">
+      <h1 class="text-4xl font-extrabold text-gray-800 dark:text-white mb-6">
+        ¡Gracias por contactarnos!
+      </h1>
+      <p class="text-sm text-gray-600 dark:text-gray-300 mb-8">
+        Nos pondremos en contacto contigo lo antes posible. <br>Apreciamos tu interés en nuestros servicios.
+      </p>
+      <a
+        href="/"
+        class="inline-block px-6 py-3 text-base font-semibold text-white bg-primary rounded-full shadow-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:bg-primary dark:hover:bg-primary-dark"
+      >
+        Volver al Inicio
+      </a>
+    </div>
   </div>
 </Layout>
