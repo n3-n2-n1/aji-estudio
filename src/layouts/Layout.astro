@@ -1,25 +1,35 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro"
+import AppHeader from "../components/AppHeader.astro";
+import WpFloat from "../components/WpFloat.astro";
+const { title, hideHeader } = Astro.props;
 ---
 
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="">
+		<meta name="description" content="" />
 		<title>AJI | Asesoramiento Juridico Integral</title>
-
-		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+		</style>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		
 	</head>
 	<body class="bg-white dark:bg-gray-900">
-		<AppHeader/>
+		{hideHeader ? null : <AppHeader />}
 		<slot />
-		<AppFooter/>
+		<WpFloat />
+		<AppFooter />
 	</body>
 </html>
 <style>
@@ -32,3 +42,4 @@ import AppHeader from "../components/AppHeader.astro"
 		margin: 0;
 	}
 </style>
+

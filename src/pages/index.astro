@@ -18,7 +18,36 @@ const { title, description } = Astro.props;
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
+		<style>
+			/* Estilos globales para la barra de desplazamiento */
+			::-webkit-scrollbar {
+			  width: 12px;
+			}
+	  
+			::-webkit-scrollbar-track {
+			  background: #f1f1f1;
+			}
+	  
+			::-webkit-scrollbar-thumb {
+			  background-color: #888;
+			  border-radius: 10px;
+			  border: 2px solid #f1f1f1;
+			}
+	  
+			::-webkit-scrollbar-thumb:hover {
+			  background-color: #555;
+			}
+	  
+			/* Estilos para Firefox */
+			* {
+			  scrollbar-width: thin;
+			  scrollbar-color: #888 #f1f1f1;
+			}
+			html {
+  scroll-behavior: smooth;
+}
+
+		  </style>
 		<!-- Título dinámico -->
 		<title>{title || 'Nombre del Sitio'}</title>
 	
@@ -43,9 +72,10 @@ const { title, description } = Astro.props;
 		<meta name="twitter:title" content={title || 'Nombre del Sitio'}>
 		<meta name="twitter:description" content={description || 'Descripción predeterminada para SEO de tu sitio.'}>
 		<meta name="twitter:image" content="/ruta-a-la-imagen.jpg">
-	
+		
 		<!-- Favicon -->
 		<link rel="icon" href="/favicon.ico">
+
 	
 	</head>
 	
