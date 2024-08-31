@@ -1,0 +1,45 @@
+---
+const initialState = "collapsed"; // Estado inicial: colapsado
+---
+
+<div class="max-w-xl mx-auto">
+  <p id="show-more-text" class={`transition-all duration-300 line-clamp-3`}>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+  </p>
+  <button
+    id="toggle-button"
+    class="mt-2 text-blue-500 hover:underline"
+    on:click="toggleText()"
+  >
+    Show More
+  </button>
+</div>
+
+<style global>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-none {
+    -webkit-line-clamp: unset;
+  }
+</style>
+
+<script>
+  function toggleText() {
+    const textElement = document.getElementById('show-more-text');
+    const button = document.getElementById('toggle-button');
+    
+    if (textElement.classList.contains('line-clamp-3')) {
+      textElement.classList.remove('line-clamp-3');
+      textElement.classList.add('line-clamp-none');
+      button.textContent = 'Show Less';
+    } else {
+      textElement.classList.remove('line-clamp-none');
+      textElement.classList.add('line-clamp-3');
+      button.textContent = 'Show More';
+    }
+  }
+</script>
