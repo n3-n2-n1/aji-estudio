@@ -1,92 +1,26 @@
 ---
-import Stats from '../components/Stats.astro';
-import Features from '../components/Features.astro';
-import HeroSection from '../components/HeroSection.astro';
-import Layout from '../layouts/Layout.astro';
-import Testimonials from '../components/Testimonials.astro';
-import CallToAction from '../components/CallToAction.astro';
-import Blog from '../components/Blog.astro';
-import FormContaxt from '../components/FormContaxt.astro';
-import WpFloat from '../components/WpFloat.astro';
-const { title, description } = Astro.props;
+import Stats from "../components/Stats.astro";
+import Features from "../components/Features.astro";
+import HeroSection from "../components/HeroSection.astro";
+import Layout from "../layouts/Layout.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Blog from "../components/Blog.astro";
+import FormContaxt from "../components/FormContaxt.astro";
+import WpFloat from "../components/WpFloat.astro";
+import Clients from "../components/Clients.astro";
 ---
 
-<Layout title="">
-	<!DOCTYPE html>
-	<html lang="es">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<style>
-			/* Estilos globales para la barra de desplazamiento */
-			::-webkit-scrollbar {
-			  width: 12px;
-			}
-	  
-			::-webkit-scrollbar-track {
-			  background: #f1f1f1;
-			}
-	  
-			::-webkit-scrollbar-thumb {
-			  background-color: #888;
-			  border-radius: 10px;
-			  border: 2px solid #f1f1f1;
-			}
-	  
-			::-webkit-scrollbar-thumb:hover {
-			  background-color: #555;
-			}
-	  
-			/* Estilos para Firefox */
-			* {
-			  scrollbar-width: thin;
-			  scrollbar-color: #888 #f1f1f1;
-			}
-			html {
-  scroll-behavior: smooth;
-}
-
-		  </style>
-		<!-- Título dinámico -->
-		<title>{title || 'Nombre del Sitio'}</title>
-	
-		<!-- Meta descripción -->
-		<meta name="description" content={description || 'Descripción predeterminada para SEO de tu sitio.'}>
-	
-		<!-- Meta keywords -->
-		<meta name="keywords" content="palabras clave, separadas, por comas, relacionadas, con tu, contenido">
-	
-		<!-- Meta autor -->
-		<meta name="author" content="Nombre del Autor">
-	
-		<!-- Meta Open Graph para redes sociales -->
-		<meta property="og:title" content={title || 'Nombre del Sitio'} />
-		<meta property="og:description" content={description || 'Descripción predeterminada para SEO de tu sitio.'} />
-		<meta property="og:image" content="/ruta-a-la-imagen.jpg" />
-		<meta property="og:url" content={Astro.url.pathname} />
-		<meta property="og:type" content="website" />
-	
-		<!-- Meta Twitter Card -->
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content={title || 'Nombre del Sitio'}>
-		<meta name="twitter:description" content={description || 'Descripción predeterminada para SEO de tu sitio.'}>
-		<meta name="twitter:image" content="/ruta-a-la-imagen.jpg">
-		
-		<!-- Favicon -->
-		<link rel="icon" href="/favicon.ico">
-
-	
-	</head>
-	
-	<main class="space-y-40 mb-40">
-		<HeroSection/>
-		<Features/>
-		<Stats/>
-		<Testimonials/>
-		<!-- <Blog/> -->
-		<!-- <CallToAction/> -->
-		<FormContaxt />
-		<WpFloat />
-	</main>
+<Layout title="Welcome to Astrolus.">
+  <main class="space-y-40 mb-40">
+    <HeroSection />
+    <!-- <Features/> -->
+    <Stats />
+    <!-- <Testimonials/> -->
+    <!-- <Blog/> -->
+    <!-- <CallToAction/> -->
+    <FormContaxt />
+    <Clients />
+    <WpFloat />
+  </main>
 </Layout>

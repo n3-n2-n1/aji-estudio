@@ -1,48 +1,57 @@
 ---
-import Container from "../components/Container.astro";
+import Container from "./Container.astro";
 ---
 
-<footer class="pb-20 md:py-40 bg-gray-50 dark:bg-gray-900">
+<footer class="py-20 md:py-40">
   <Container>
     <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
       <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
-        <!-- Menú de enlaces -->
         <div
-          class="flex w-full justify-center space-x-8 text-gray-600 dark:text-gray-300 sm:w-7/12 md:justify-start"
+          class="flex w-full justify-center space-x-12 text-gray-600 dark:text-gray-300 sm:w-7/12 md:justify-start"
         >
           <ul class="list-inside list-disc space-y-8">
-            <li><a href="/" class="transition hover:text-primary">Inicio</a></li>
-            <li><a href="/riesgos-trabajo" class="transition hover:text-primary">ART</a></li>
-            <li><a href="/mala-praxis" class="transition hover:text-primary">Mala Praxis</a></li>
+            <li><a href="#" class="transition hover:text-primary">Home</a></li>
+            <li>
+              <a href="#" class="transition hover:text-primary">Blocks</a>
+            </li>
+            <li>
+              <a href="#" class="transition hover:text-primary">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="transition hover:text-primary">Terms of Use</a>
+            </li>
           </ul>
-          <ul class="list-inside list-disc space-y-8">
-            
-            <li><a href="/seguros" class="transition hover:text-primary">Seguros</a></li>
-            <li><a href="/sucesiones" class="transition hover:text-primary">Sucesiones</a></li>
-            <li><a href="/accidentes" class="transition hover:text-primary">Accidentes</a></li>
-          </ul>
+
+
         </div>
+        <div
+          class="m-auto mt-16 w-10/12 space-y-6 text-center sm:mt-auto sm:w-5/12 sm:text-left"
+        >
 
-        <!-- Información y Copyright -->
-        <div class="m-auto mt-16 w-10/12 space-y-6 text-center sm:mt-auto sm:w-5/12 sm:text-left">
-          <div class="flex justify-between items-center">
-            <!-- Logo a la derecha -->
-            <a href="/" class="block">
-              <img src="/logo.svg" alt="Logo" class="w-52 h-auto sm:w-52" />
-            </a>
-          </div>
+          <span class="block text-gray-500 dark:text-gray-400"
+            >AIJ 2024 &copy; <span id="year"></span></span
+          >
 
-          <!-- Enlaces secundarios -->
-          <div class="flex flex-col sm:flex-row sm:justify-between text-gray-600 dark:text-gray-300 mt-4">
-            <a href="/terminos" class="transition hover:text-primary">Términos de Uso</a>
-            <a href="/terminos" class="transition hover:text-primary">Política de Privacidad</a>
-            <a href="https://wa.me/" class="transition hover:text-primary">Sobre Nosotros</a>
-          </div>
-
-          <!-- Texto de pie de página -->
-          <span class="block text-sm font-medium text-gray-500 dark:text-gray-400 mt-4">
-            AIJ 2024 &copy; <span id="year"></span> - Powered by Vincere
+          <span class="flex justify-between text-gray-600 dark:text-white">
+            <a href="#" class="font-medium">Terms of Use </a>
+            <a href="#" class="font-medium"> Privacy Policy</a>
           </span>
+
+          <span class="block text-gray-500 dark:text-gray-400"
+            >Need help? </span
+          >
+
+          <a
+              href="#"
+              class="font-semibold text-gray-600 dark:text-white"
+            >
+              Contact Us</a
+            >
+            <span class="block text-gray-500 dark:text-gray-400"
+            >Powered by Vincere</span
+          >
+
+          
         </div>
       </div>
     </div>

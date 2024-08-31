@@ -1,35 +1,25 @@
 ---
 import AppFooter from "../components/AppFooter.astro";
-import AppHeader from "../components/AppHeader.astro";
-import WpFloat from "../components/WpFloat.astro";
-const { title, hideHeader } = Astro.props;
+import AppHeader from "../components/AppHeader.astro"
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
+
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="" />
+		<meta name="description" content="Template built with tailwindcss using Tailus blocks v2">
 		<title>AJI | Asesoramiento Juridico Integral</title>
-		<style>
-			html {
-				scroll-behavior: smooth;
-			}
-		</style>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		
+
+		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-white dark:bg-gray-900">
-		{hideHeader ? null : <AppHeader />}
+		<AppHeader/>
 		<slot />
-		<WpFloat />
-		<AppFooter />
+		<AppFooter/>
 	</body>
 </html>
 <style>
@@ -42,4 +32,3 @@ const { title, hideHeader } = Astro.props;
 		margin: 0;
 	}
 </style>
-
