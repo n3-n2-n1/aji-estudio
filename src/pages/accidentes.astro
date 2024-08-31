@@ -1,12 +1,944 @@
 ---
-// src/pages/automoviles.astro
-import InformativePage from '../layouts/InformativePage.astro';
-
+// src/pages/mala-praxis.astro
+import Container from "../components/Container.astro";
+import FAQ from "../components/FAQ.astro";
+import FormContaxt from "../components/FormContaxt.astro";
+import InformativePage from "../layouts/InformativePage.astro";
+import Steps from "../components/Steps.astro";
+import Annoucement from "../components/Annoucement.astro";
+import Layout from "../layouts/Layout.astro";
 const pageData = {
-  title: "Accidentes Personales",
-  description: "Protección completa para tu vehículo.",
-  features: ["Cobertura total", "Asistencia en carretera", "Protección contra robo"],
+  title: "Seguros de Mala Praxis",
+  description: "Protección para profesionales de la salud.",
+  features: [
+    "Cobertura legal",
+    "Apoyo en litigios",
+    "Protección contra negligencia",
+  ],
 };
-
 ---
-<InformativePage {...pageData} />
+
+<Layout>
+  <Container>
+    <section>
+      <div class="relative" id="home">
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+        >
+          <div
+            class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
+          >
+          </div>
+          <div
+            class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
+          >
+          </div>
+        </div>
+        <div class="relative pt-36 ml-auto">
+          <div class="lg:w-3/3 text-center mx-auto">
+            <h1
+              class="text-gray-900 dark:text-white font-bold text-5xl md:text-md xl:text-md"
+            >
+              Asesorate sin cargos ni tarifas iniciales. <br />Solo cobramos al
+              final <span class="text-primary dark:text-primary select-text">
+                (en caso que ganes)
+              </span>
+            </h1>
+            <p class="mt-8 text-gray-500 dark:text-gray-300 text-lg">
+              Iniciá tu reclamo GRATIS, FÁCIL Y RÁPIDO con el asesoramiento
+              especializado de nuestro equipo interdisciplinario de abogados y
+              peritos accidentológicos. Más de 10 años de experiencia, seriedad
+              y responsabilidad nos avalan. Solo cobramos al final, si vos
+              ganás. ESTAMOS PARA AYUDARTE.
+            </p>
+            <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+              <a
+                href="#"
+                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+              >
+                <span class="relative text-base font-semibold text-white"
+                  >Contactanos</span
+                >
+              </a>
+              <a
+                href="#"
+                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
+              >
+                <span
+                  class="relative text-base font-semibold text-primary dark:text-white"
+                  >Quiero saber más</span
+                >
+              </a>
+            </div>
+            <p class="mt-8 text-gray-500 dark:text-gray-300 text-lg"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20"
+      >
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident2.png"
+            />
+
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              ¿Sufriste un Accidente de Tránsito?
+            </div>
+            <p class="text-gray-500 text-sm">
+              Si al conducir tu vehículo como dueño o usuario del mismo sufriste
+              un accidente de tránsito por culpa de otro conductor de todos los
+              daños que hayas sufrido, tanto sean daños físicos como daños al
+              vehiculo.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident5.png"
+            />
+
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              ¿Tuviste Lesiones?
+            </div>
+            <p class="text-gray-500 text-sm">
+              En el caso de haber lesionados, te recomendamos que llames a una
+              ambulancia y a la Policía. Caso contrario, es indispensable que
+              recibas atención médica a la brevedad (por más que consideres que
+              sean golpes leves); así recibirás atención y tendrás constancia de
+              haber pasado por una guardia.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident8.png"
+            />
+            <div
+              class="absolute top-0 right-0 bg-indigo-500 text-white font-bold px-2 py-1 m-2 rounded-md"
+            >
+              New
+            </div>
+
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              ¿Quién tuvo la culpa del accidente?
+            </div>
+            <p class="text-gray-500 text-sm">
+              Determinar quién provocó el siniestro puede no ser tarea sencilla,
+              ya que cada accidente tiene sus particularidades; por lo que te
+              aconsejamos que nos consultes así te asesoramos SIN COSTO! Es
+              importante que nos contactes lo antes posible ya que ESTAMOS PARA
+              AYUDARTE..
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident1.png"
+            />
+
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              Accidente de moto
+            </div>
+            <p class="text-gray-500 text-sm">
+              Todo motociclista y acompañante tiene derecho a una justa
+              indemnización por las lesiones sufridas en un accidente de
+              tránsito. En AJI somos especialistas en indemnizaciones por
+              accidentes de tránsito y ¡podemos ayudarte!
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident4.png"
+            />
+
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              ¿ibas de acompañante y sufriste alguna lesión?
+            </div>
+            <p class="text-gray-500 text-sm">
+              Podés reclamar una indemnización por las lesiones sufridas en un
+              accidente de tránsito a todos los conductores participantes en el
+              siniestro, y a sus aseguradoras.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident9.png"
+            />
+
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              Peatón atropellado
+            </div>
+            <p class="text-gray-500 text-sm">
+              Los peatones y los ciclistas son los más vulnerables en todo
+              accidente de tránsito, y por ende suelen llevarse la peor parte;
+              sufriendo lesiones de gravedad e incluso, muchas veces, el
+              fallecimiento. Si fuiste víctima de un accidente de tránsito como
+              peatón o ciclista CONSULTANOS!
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident3.png"
+            />
+
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              Accidentes en transporte público
+            </div>
+            <p class="text-gray-500 text-sm">
+              Si viajabas en colectivo, subte, tren o taxi y sufriste un
+              accidente de tránsito con lesiones, merecés una justa reparación.
+              Para obtener la mejor indemnización y en el mejor tiempo posible
+              contactáte con nosotros por cualquiera de nuestros canales de
+              comunicación.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident6.png"
+            />
+            <div
+              class="absolute bottom-0 right-0 bg-gray-800 text-white px-2 py-1 m-2 rounded-md text-xs"
+            >
+              3 min read
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              ¿No llevabas casco?
+            </div>
+            <p class="text-gray-500 text-sm">
+              Es factible reclamar una indemnización justa a pesar de que al
+              momento del accidente no llevaras puesto el casco reglamentario.
+              Si ese fue tu caso, contactáte con nosotros y te responderemos a
+              la brevedad.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="images/accident7.png"
+            />
+            <div
+              class="absolute bottom-0 right-0 bg-gray-800 text-white px-2 py-1 m-2 rounded-md text-xs"
+            >
+              3 min read
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="text-lg font-medium text-gray-800 mb-2">
+              ¿No tenías seguro o registro de conducir al ocurrir el accidente?
+            </div>
+            <p class="text-gray-500 text-sm">
+              A pesar de haber incurrido en estas faltas de tránsito al momento
+              del siniestro podés reclamar una indemnización. Para ello
+              contactános para recibir el mejor asesoramiento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="py-24 mx-auto flex flex-col md:flex-row gap-12">
+        <div class="flex flex-col text-left basis-1/2">
+          <p class="inline-block font-semibold text-primary mb-4">
+            Accidentes de Trabajo
+          </p>
+          <p
+            class="sm:text-4xl text-3xl font-extrabold text-base-content text-white"
+          >
+            Preguntas Frecuentes
+          </p>
+        </div>
+        <ul class="basis-1/2">
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Cómo actuar ante un accidente de Tránsito?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  Si te encuentras involucrado en un accidente de tránsito, ya
+                  sea como peatón, conductor o pasajero de un vehículo público o
+                  privado, lo primordial es recopilar información detallada del
+                  vehículo responsable, incluyendo la matrícula y la póliza de
+                  seguro. Es recomendable obtener también testimonios de
+                  posibles testigos que corroboren tu relato de los hechos. A
+                  continuación, debes solicitar atención médica de inmediato
+                  contactando al servicio de emergencia SAME (107) y/o a la
+                  Policía (911). En el hospital donde recibas asistencia, es
+                  fundamental obtener constancias de tu atención médica y
+                  tratamientos recibidos, ya que estos documentos son cruciales
+                  para maximizar tu indemnización. Si la policía interviene en
+                  el lugar del accidente, es aconsejable iniciar una acción
+                  penal por lesiones. Si no es así, es importante contactar a un
+                  abogado de confianza para recibir asesoramiento sobre los
+                  pasos a seguir antes de presentar la denuncia en comisaría. La
+                  declaración que hagas sobre los hechos es crucial para
+                  determinar la responsabilidad del accidente. Si decides
+                  presentar la denuncia administrativa directamente ante tu
+                  seguro, te recomendamos nuevamente que consultes con tu
+                  abogado de confianza. Recuerda que la forma en que declares lo
+                  sucedido es decisiva para determinar la responsabilidad del
+                  accidente. Por último, te recordamos que es importante tomar
+                  fotografías de los daños causados al vehículo responsable y al
+                  tuyo propio, así como del lugar del accidente. No aceptes
+                  acuerdos que los representantes de las aseguradoras te
+                  presenten como justos, ya que su objetivo es cerrar el caso
+                  con la menor indemnización posible. Es crucial que tú y todos
+                  los ocupantes del vehículo busquen atención médica de
+                  inmediato, incluso si no sienten haber sido heridos, ya que
+                  algunas lesiones pueden manifestarse días o semanas después
+                  del accidente. Cuanto más tiempo pase entre la fecha del
+                  accidente y tu primera visita al médico, más fácil será para
+                  la compañía de seguros reducir tu reclamo por lesiones."
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Quiénes tienen derecho a reclamar por un accidente?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  El afectado por el accidente tendrá la posibilidad de reclamar
+                  indemnización por lesiones físicas causadas por el siniestro.
+                  Asimismo, quien haya asumido gastos médicos en representación
+                  del asegurado (como medicamentos, honorarios médicos,
+                  prótesis, tratamientos, etc.) también podrá reclamar. En caso
+                  de fallecimiento del accidentado, sus herederos legales
+                  (hijos, cónyuges, padres, nietos, abuelos) tendrán derecho a
+                  reclamar. Los concubinos también tendrán derecho a reclamar,
+                  aunque con ciertas restricciones. Además, quienes recibieran
+                  apoyo económico y material del fallecido en vida (hermanos,
+                  hijos adoptivos, etc.) y quienes hayan cubierto gastos de
+                  funeral y/o enfermedad final también podrán reclamar. En
+                  cuanto a daños a vehículos (automóviles, camiones, aviones,
+                  motos, bicicletas, etc.), el titular registral y quien tenga
+                  uso, usufructo o posesión del vehículo por cualquier título
+                  podrán reclamar.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Cuál es el plazo máximo para reclamar por un accidente?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  El plazo máximo para iniciar el reclamo es de 3 años desde la
+                  fecha del accidente.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Que se puede reclamar por un accidente?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  La persona que haya sufrido lesiones como consecuencia de un
+                  accidente de tránsito tiene derecho a reclamar: El daño físico
+                  El daño psicológico. El daño moral. El daño estético. El
+                  tratamiento psicológico. El tratamiento kinesiológico. El
+                  reintegro de los gastos por honorarios médicos. El reintegro
+                  de los gastos por internación. El reintegro de los gastos en
+                  medicamentos. El reintegro de los gastos por los traslados. .
+                  El lucro cesante. La pérdida de chance. Según el caso, todas
+                  las prestaciones, en dinero y/o en especie, previstas en la
+                  Ley de Riesgos del Trabajo Los familiares/herederos legales de
+                  una persona fallecida en un accidente de tránsito tienen
+                  derecho a reclamar:   El daño moral. El valor vida. La pérdida
+                  de chance. El daño psicológico. El tratamiento psicológico. El
+                  reintegro de los gastos de sepelio. El reintegro de los gastos
+                  de última enfermedad. Todas las prestaciones previstas en la
+                  Ley de Riesgos del Trabajo.   El titular registral y/o
+                  usuario/tenedor/usufructuario de un automotor de un automotor
+                  accidentado tiene derecho a reclamar:   El costo de la
+                  reparación del rodado. La privación de uso del rodado. La
+                  desvalorización del rodado. El lucro cesante (si el rodado es
+                  explotado comercialmente)
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white">
+                ¿Cuánto se cobra de indemnización por un accidente de tránsito?
+              </span>
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  En general, las compañías de seguro tienden a ofrecer una
+                  indemnización más elevada cuando el reclamo por un siniestro
+                  se presenta a través de un abogado, en comparación con un
+                  reclamo individual. Esto se debe, entre otros motivos, a las
+                  regulaciones legales que rigen el funcionamiento de las
+                  aseguradoras. Cuando un reclamo se inicia con representación
+                  legal, las compañías deben reservar contablemente el monto
+                  máximo previsto para el tipo de reclamo en cuestión, hasta que
+                  el caso se resuelva, ya sea a través de medios extrajudiciales
+                  (mediación) o hasta la conclusión del juicio. De esta manera,
+                  las aseguradoras tienen un incentivo adicional para llegar a
+                  un acuerdo con el demandante.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white">
+                ¿Cuánto puede tardar el reclamo?
+              </span>
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  Por lo general van desde los 90 a los 180 días, tanto los
+                  reclamos extrajudiciales con abogado y los reclamos
+                  administrativos (directamente por el accidentado en la
+                  compañía). La vía judicial puede extenderse entre 3 a 8 años.
+                  Esta opción sólo es recomendada en los casos donde la compañía
+                  de seguros no está dispuesta a negociar una indemnización
+                  coherente respecto de los daños sufridos.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Cuándo conviene contratar a un abogado para reclamar por el
+                accidente y cuando conviene hacer el reclamo administrativo?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  La suma a pagar, por lo general, será mayor iniciando acciones
+                  legales; pero existen casos particulares en donde es
+                  conveniente efectuar el reclamo administrativo simple y no se
+                  justifica realizar un reclamo por vías legales. Estos casos
+                  son cuando no existen lesiones comprobables a raíz del
+                  accidente (ej: no se encontraba en el vehículo) y por otro
+                  lado los daños materiales producidos son muy bajos, con lo
+                  cual la relación costo/beneficio, no justifica iniciar
+                  acciones legales.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Puedo mandar a arreglar el auto antes de hablar con la
+                compañía de seguros?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  No es recomendable reparar el vehículo hasta que lo
+                  inspeccione la compañía de seguros que deberá cubrir el
+                  siniestro. En caso que necesite repararlo en forma urgente,
+                  deberá previamente sacarle fotos color (en al menos una de las
+                  fotos debe verse la patente de su vehículo) y tener bien
+                  justificada esa premura.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Debo mantener el seguro vigente para iniciar la demanda por un
+                accidente?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">No es necesario</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Si me lesione en el accidente, que necesito para poder
+                reclamar la indemnización por los daños?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  Es fundamental que guarde todo tipo de documentación, como ser
+                  órdenes médicas, recetas, comprobantes de turnos médicos,
+                  recibos o facturas por gastos hechos en atención médica o
+                  remedios, fotografías, etc. ya que serán un elemento
+                  probatorio de gran peso a tu favor en el proceso. Sin embargo,
+                  si no tiene comprobantes de gastos, igualmente puede reclamar
+                  una indemnización!
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >A que llamamos Indemnización por esguince cervical?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  El latigazo cervical es una de las lesiones más frecuentes en
+                  accidentes de tránsito, ya sea por impactos frontales,
+                  laterales o colisiones por detrás. Las compañías de seguro
+                  suelen intentar reducir la gravedad de estos reclamos cuando
+                  se presentan sin asesoramiento legal, por lo que es crucial
+                  contar con un abogado experto en caso de sufrir este tipo de
+                  lesión. La lesión se produce por un movimiento repentino y
+                  brusco de la cabeza hacia atrás (hiperextensión), hacia
+                  adelante (hiperflexión) o una combinación de ambos, afectando
+                  músculos, ligamentos, articulaciones e incluso alterando la
+                  curvatura natural del cuello. Las indemnizaciones por esguince
+                  cervical se determinan según baremos, considerando la gravedad
+                  de la lesión y sus secuelas. Como mencionamos anteriormente,
+                  el esguince cervical es una lesión que las aseguradoras suelen
+                  subestimar, por lo que el resultado dependerá en gran medida
+                  de la pericia del médico que lo evalúe. La dificultad para
+                  evaluar el alcance real de la lesión radica en que las
+                  secuelas, como dolores, limitaciones de movilidad y molestias,
+                  no se reflejan en pruebas médicas y dependen de la
+                  credibilidad del paciente. Nuestro equipo de médicos legistas
+                  cuenta con más de diez años de experiencia asesorando a
+                  pacientes con diversas lesiones, incluyendo la mencionada.
+                  Esto garantiza obtener el mejor resultado posible, logrando
+                  que las secuelas de la lesión reciban la máxima valoración y,
+                  por lo tanto, que usted reciba la indemnización más justa por
+                  su siniestro
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <script>
+        function toggleFAQ(button) {
+          const content = button.nextElementSibling;
+          button.setAttribute(
+            "aria-expanded",
+            button.getAttribute("aria-expanded") === "false" ? "true" : "false"
+          );
+          content.style.maxHeight =
+            button.getAttribute("aria-expanded") === "true"
+              ? content.scrollHeight + "px"
+              : "0";
+        }
+      </script>
+    </section>
+
+    <section class="py-4">
+      <section>
+        <div
+          class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+        >
+          <div
+            class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
+          >
+            <div
+              class="mx-auto max-w-lg lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
+            >
+              <h2 class="text-3xl font-bold sm:text-4xl text-white">
+                El Plazo para reclamar es de 3 años.
+              </h2>
+
+              <p class="mt-4 text-lg text-gray-300">
+                Si ibas o volvías del trabajo al momento del siniestro también podemos reclamarle a la ART. No dudes en consultarnos.
+              </p>
+
+              <a
+                href="#"
+                class="mt-8 inline-block rounded-full bg-green-500 px-12 py-3 text-lg font-bold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+              >
+                Consultanos por WhatsApp
+              </a>
+            </div>
+            <div>
+              <img class="w-72"src="./logo.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+    <section class="py-4">
+      <FormContaxt />
+    </section>
+  </Container>
+</Layout>

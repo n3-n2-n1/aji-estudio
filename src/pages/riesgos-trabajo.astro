@@ -1,12 +1,655 @@
 ---
 // src/pages/mala-praxis.astro
-import InformativePage from '../layouts/InformativePage.astro';
-
+import Container from "../components/Container.astro";
+import FAQ from "../components/FAQ.astro";
+import FormContaxt from "../components/FormContaxt.astro";
+import InformativePage from "../layouts/InformativePage.astro";
+import Steps from "../components/Steps.astro";
+import Annoucement from "../components/Annoucement.astro";
+import Layout from "../layouts/Layout.astro";
 const pageData = {
-  title: "Seguros de ART",
+  title: "Seguros de Mala Praxis",
   description: "Protección para profesionales de la salud.",
-  features: ["Cobertura legal", "Apoyo en litigios", "Protección contra negligencia"],
+  features: [
+    "Cobertura legal",
+    "Apoyo en litigios",
+    "Protección contra negligencia",
+  ],
 };
-
 ---
-<InformativePage {...pageData} />
+
+<Layout>
+  <Container>
+    <section>
+      <div class="relative" id="home">
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+        >
+          <div
+            class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
+          >
+          </div>
+          <div
+            class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
+          >
+          </div>
+        </div>
+        <div class="relative pt-36 ml-auto">
+          <div class="lg:w-3/3 text-center mx-auto">
+            <h1
+              class="text-gray-900 dark:text-white font-bold text-5xl md:text-md xl:text-md"
+            >
+              Interponé el reclamo sin cargos ni tarifas iniciales. <br />Solo
+              cobramos al final <span
+                class="text-primary dark:text-primary select-text"
+              >
+                (en caso que ganes)
+              </span>
+            </h1>
+            <p class="mt-8 text-gray-500 dark:text-gray-300 text-lg">
+              En AJI nuestro equipo de especialistas en Mala Praxis te
+              acompañara en el reclamo<br /> desde el inicio y con la dedicación
+              exclusiva de nuestros expertos abogados, médicos legistas y psicólogos.
+            </p>
+            <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+              <a
+                href="#"
+                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+              >
+                <span class="relative text-base font-semibold text-white"
+                  >Contactanos</span
+                >
+              </a>
+              <a
+                href="#"
+                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
+              >
+                <span
+                  class="relative text-base font-semibold text-primary dark:text-white"
+                  >Quiero saber más</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-8 mb-8 flex items-center justify-center border-b-2 p-12 border-x-slate-900">
+      <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 justify-center">
+        
+        <div class="flex gap-4 md:items-center">
+          <div class="w-full md:w-5/6">
+            <h4 class="font-semibold text-lg text-gray-700 dark:text-indigo-300">
+              ¿Sufriste un Accidente de Trabajo y te despidieron?
+            </h4>
+            <p class="text-gray-500 dark:text-gray-400 mt-2">
+              En AJI somos expertos en reclamos contra la ART y contra tu empleador por el despido.
+            </p>
+          </div>
+        </div>
+    
+        <div class="flex gap-4 md:items-center">
+          <div class="w-full md:w-5/6">
+            <h4 class="font-semibold text-lg text-gray-700 dark:text-indigo-300">
+              ¿A qué se considera accidente de trabajo?
+            </h4>
+            <p class="text-gray-500 dark:text-gray-400 mt-2">
+              Es un hecho repentino y violento que ocurre en el lugar donde el trabajador presta servicio y a causa del mismo. Consúltenos.
+            </p>
+          </div>
+        </div>
+    
+        <div class="flex gap-4 md:items-center">
+          <div class="w-full md:w-5/6">
+            <h4 class="font-semibold text-lg text-gray-700 dark:text-indigo-300">
+              ¿Qué pasa si el Accidente Laboral es durante el Periodo de Prueba? ¿Estoy cubierto?
+            </h4>
+            <p class="text-gray-500 dark:text-gray-400 mt-2">
+              Sí estás cubierto, ya que la ART es una cobertura de seguros y se aplica inmediatamente al ser dado de alta, sin importar la antigüedad en el cargo.
+            </p>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+
+    <section>
+      <div class="py-24 mx-auto flex flex-col md:flex-row gap-12">
+        <div class="flex flex-col text-left basis-1/2">
+          <p class="inline-block font-semibold text-primary mb-4">
+            Accidentes de Trabajo
+          </p>
+          <p
+            class="sm:text-4xl text-3xl font-extrabold text-base-content text-white"
+          >
+            Preguntas Frecuentes
+          </p>
+        </div>
+        <ul class="basis-1/2">
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Qué es recomendable hacer en caso de sufrir un accidente o
+                enfermedad profesional?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  Deberás comunicarlo a tu empleador, para que éste denuncie el
+                  accidente o enfermedad laboral a la ART. En caso que se niegue
+                  a denunciarlo es recomendable buscar el asesoramiento de un
+                  abogado para evitar incurrir en graves errores procedimentales
+                  que pudieran perjudicarte. Para ello en AJI contamos con el
+                  mejor equipo de profesionales siempre dispuestos a ayudarte!
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Al recibir mi denuncia qué debe hacer la ART?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  Deberás comunicarlo a tu empleador, para que éste denuncie el
+                  accidente o enfermedad laboral a la ART. En caso que se niegue
+                  a denunciarlo es recomendable buscar el asesoramiento de un
+                  abogado para evitar incurrir en graves errores procedimentales
+                  que pudieran perjudicarte. Para ello en AJI contamos con el
+                  mejor equipo de profesionales siempre dispuestos a ayudarte!
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Qué riesgos están cubiertos por la ART??</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  Deberás comunicarlo a tu empleador, para que éste denuncie el
+                  accidente o enfermedad laboral a la ART. En caso que se niegue
+                  a denunciarlo es recomendable buscar el asesoramiento de un
+                  abogado para evitar incurrir en graves errores procedimentales
+                  que pudieran perjudicarte. Para ello en AJI contamos con el
+                  mejor equipo de profesionales siempre dispuestos a ayudarte!
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿La ART puede rechazar un accidente o enfermedad profesional?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  Deberás comunicarlo a tu empleador, para que éste denuncie el
+                  accidente o enfermedad laboral a la ART. En caso que se niegue
+                  a denunciarlo es recomendable buscar el asesoramiento de un
+                  abogado para evitar incurrir en graves errores procedimentales
+                  que pudieran perjudicarte. Para ello en AJI contamos con el
+                  mejor equipo de profesionales siempre dispuestos a ayudarte!
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white">
+                ¿Qué hacer si no concuerdo con el alta médica?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  En estos casos se debe informar al empleador para que este
+                  inste el reingreso a la ART, pero si se niega a hacerlo no
+                  dudes en contactarnos para solicitar directamente el reingreso
+                  a la ART.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white">
+                ¿Mi continuidad laboral puede verse afectada por la iniciación
+                del reclamo?
+              </span>
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  Our insurance plans are customizable. You can tailor your
+                  coverage to meet your specific needs and budget.
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              aria-expanded="false"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="flex-1 text-base-content text-white"
+                >¿Qué son las aseguradoras de Riesgo de Trabajo (ART)?</span
+              >
+              <svg
+                class="flex-shrink-0 w-4 h-4 ml-auto fill-current"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center transition duration-200 ease-out false"
+                ></rect>
+                <rect
+                  y="7"
+                  width="16"
+                  height="2"
+                  rx="1"
+                  class="transform origin-center rotate-90 transition duration-200 ease-out false"
+                ></rect>
+              </svg>
+            </button>
+            <div
+              class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+              style="transition: max-height 0.3s ease-in-out 0s;"
+            >
+              <div class="pb-5 leading-relaxed">
+                <div class="space-y-2 leading-relaxed">
+                  There may be a waiting period for certain insurance claims,
+                  depending on the policy terms and conditions. Please refer to
+                  your policy documents for details.
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <script>
+        function toggleFAQ(button) {
+          const content = button.nextElementSibling;
+          button.setAttribute(
+            "aria-expanded",
+            button.getAttribute("aria-expanded") === "false" ? "true" : "false"
+          );
+          content.style.maxHeight =
+            button.getAttribute("aria-expanded") === "true"
+              ? content.scrollHeight + "px"
+              : "0";
+        }
+      </script>
+    </section>
+
+    <section class="py-4">
+      <section>
+        <div
+          class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+        >
+          <div
+            class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
+          >
+            <div
+              class="mx-auto max-w-lg lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
+            >
+              <h2 class="text-3xl font-bold sm:text-4xl text-white">
+                Abogados Especializados en Reclamos contra ART
+              </h2>
+
+              <p class="mt-4 text-lg text-gray-300">
+                Los accidentes laborales ocurren cuando menos los esperás.
+                Aunque esperamos que nunca te sucedan, es importante que sepas
+                que podés contar con nosotros si llegaran a ocurrir.
+              </p>
+
+              <a
+                href="#"
+                class="mt-8 inline-block rounded-full bg-primary px-12 py-3 text-lg font-bold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+              >
+                Consultanos por WhatsApp
+              </a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-2">
+              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-blue-500 dark:shadow-neutral-700/70">
+                <div class="p-4 md:p-5">
+                  <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                    Card title
+                  </h3>
+                  <p class="mt-2 text-gray-500 dark:text-neutral-400">
+                    With supporting text below as a natural lead-in to additional content.
+                  </p>
+                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600" href="#">
+                    Card link
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-blue-500 dark:shadow-neutral-700/70">
+                <div class="p-4 md:p-5">
+                  <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                    Card title
+                  </h3>
+                  <p class="mt-2 text-gray-500 dark:text-neutral-400">
+                    With supporting text below as a natural lead-in to additional content.
+                  </p>
+                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600" href="#">
+                    Card link
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-blue-500 dark:shadow-neutral-700/70">
+                <div class="p-4 md:p-5">
+                  <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                    Card title
+                  </h3>
+                  <p class="mt-2 text-gray-500 dark:text-neutral-400">
+                    With supporting text below as a natural lead-in to additional content.
+                  </p>
+                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600" href="#">
+                    Card link
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-blue-500 dark:shadow-neutral-700/70">
+                <div class="p-4 md:p-5">
+                  <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                    Card title
+                  </h3>
+                  <p class="mt-2 text-gray-500 dark:text-neutral-400">
+                    With supporting text below as a natural lead-in to additional content.
+                  </p>
+                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600" href="#">
+                    Card link
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="py-12">
+      <h2
+        class="text-3xl font-bold text-gray-900 md:text-4xl justify-center dark:text-white mb-12"
+      >
+        Reclamos
+      </h2>
+      <div class="grid grid-cols-1 grid-rows-1 md:grid-cols-2">
+        <div
+          class="me-4 block rounded-lg bg-transparent border-primary border-solid border-l-4 shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface"
+        >
+          <div class="p-6">
+            <h5 class="mb-2 text-2xl font-medium leading-tight">
+              ¿Qué es Accidente In Itinere?
+            </h5>
+            <p class="mb-4 text-base">
+              Un accidente in itínere ocurre al ir o volver del trabajo. Las ART
+              deben cubrirlos. Los más comunes son robos y accidentes viales.
+              ¡Consúltanos si te ocurrió uno!
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="me-4 block rounded-lg bg-transparent border-primary border-solid border-l-4 shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface"
+        >
+          <div class="p-6">
+            <h5 class="mb-2 text-2xl font-medium leading-tight">
+              ¿En que casos cubre la ART un accidente In itinere?
+            </h5>
+            <p class="mb-4 text-base">
+              La ART debe cubrir este tipo de siniestros, siempre y cuando el
+              damnificado haya modificado el recorrido habitual y más corto
+              posible dentro de lo razonable. <br />En otras palabras, no debe
+              desviarse groseramente ya que en ese caso puede presumirse que el
+              desvío tuvo lugar para hacer otras cosas (ejemplo ir a la casa de
+              un familiar o ir hacer compras). Pero en la generalidad, si el
+              recorrido es el habitual y razonable la ART debe hacerse
+              responsable de los accidentes In Itinere.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="me-4 block rounded-lg bg-transparent border-primary border-solid border-l-4 shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface mt-4"
+        >
+          <div class="p-6">
+            <h5 class="mb-2 text-2xl font-medium leading-tight">
+              ¿No puedo modificar el trayecto a mi trabajo?
+            </h5>
+            <p class="mb-4 text-base">
+              Sí, podés hacerlo. “El trabajador podrá declarar por escrito ante
+              el empleador, y éste dentro de las setenta y dos (72) horas ante
+              el asegurador, que el itinere se modificará por las razones que
+              fueran.” Si cambiaste de domicilio o de rutina de viaje debés
+              comunicarlo a tu empleador para no perder el amparo de la ART en
+              relación a los accidentes In itínere.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="me-4 block rounded-lg bg-transparent border-primary border-solid border-l-4 shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface mt-4"
+        >
+          <div class="p-6">
+            <h5 class="mb-2 text-2xl font-medium leading-tight">
+              ¿A qué se considera Enfermedad Profesional?
+            </h5>
+            <p class="mb-4 text-base">
+              La Enfermedad Profesional es aquella producida por causa del lugar
+              o del tipo de trabajo. Hay tareas específicas que luego de un
+              tiempo dejan huella en el cuerpo del trabajador, produciendo
+              dolores crónicos o molestias insoportables. Pueden producirse por
+              trabajar en posiciones forzadas de la columna, por el uso de
+              fuerza excesiva o por la falta de elementos protectores. Es por
+              eso que es importante denunciar a tiempo la existencia de estos
+              dolores o molestias ante la ART para evitar que siga agravándose
+              la lesión. Contá con nosotros para ayudarte con eso!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4">
+      <FormContaxt />
+    </section>
+  </Container>
+</Layout>
