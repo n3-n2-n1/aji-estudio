@@ -1,12 +1,510 @@
 ---
 // src/pages/mala-praxis.astro
-import InformativePage from '../layouts/InformativePage.astro';
-
-const pageData = {
-  title: "Sucesiones",
-  description: "Protección para profesionales de la salud.",
-  features: ["Cobertura legal", "Apoyo en litigios", "Protección contra negligencia"],
-};
-
+import Layout from "../layouts/Layout.astro"
+import Container from "../components/Container.astro"
+import Steps from "../components/Steps.astro"
+import Annoucement from "../components/Annoucement.astro"
+import FormContaxt from "../components/FormContaxt.astro"
 ---
-<InformativePage {...pageData} />
+
+
+<Layout>
+  <Container>
+    <section>
+      <div class="relative" id="home">
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+        >
+          <div
+            class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
+          >
+          </div>
+          <div
+            class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
+          >
+          </div>
+        </div>
+        <div class="relative pt-36 ml-auto">
+          <div class="lg:w-3/3 text-center mx-auto">
+            <h1
+              class="text-gray-900 dark:text-white font-bold text-5xl md:text-md xl:text-md"
+            >
+              Asistencia Integral en <span
+                class="text-primary dark:text-white select-text"
+              >
+                Sucesiones</span
+              >
+            </h1>
+            <p class="mt-8 text-gray-500 dark:text-gray-300 text-lg">
+              En nuestro estudio jurídico, comprendemos la importancia y la sensibilidad que rodea los procesos de sucesiones. <br>
+              Estamos aquí para acompañarte en cada paso, ofreciendo un servicio integral que abarca desde el asesoramiento inicial hasta la resolución definitiva.
+            </p>
+            <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+              <a
+                href="#"
+                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+              >
+                <span class="relative text-base font-semibold text-white"
+                  >Contactanos</span
+                >
+              </a>
+              <a
+                href="#"
+                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
+              >
+                <span
+                  class="relative text-base font-semibold text-primary dark:text-white"
+                  >Quiero saber más</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-12 items-center justify-center mb-12">
+      <div
+        class="flex space-x-4 divide-x-0 divide-gray-100 dark:divide-gray-800"
+      >
+        <div class="flex gap-4 md:items-center">
+          <div class="w-5/6">
+            <h4
+              class="font-semibold text-lg text-gray-700 dark:text-indigo-300"
+            >
+              Consultanos Gratis
+            </h4>
+            <p class="text-gray-500 dark:text-gray-400">
+          Con un enfoque personalizado y atención a los detalles, nos aseguramos de que los derechos de todos los involucrados sean protegidos, 
+          facilitando un proceso transparente y justo.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 md:items-center">
+          <div class="w-5/6">
+            <h4
+              class="font-semibold text-lg text-gray-700 dark:text-indigo-300"
+            >
+              Cobramos solo si ganás
+            </h4>
+            <p class="text-gray-500 dark:text-gray-400">
+          Ya sea que se trate de una sucesión testada o intestada, nuestro equipo de profesionales está preparado para ofrecerte la tranquilidad y el respaldo legal que necesitas.<br /> 
+          desde el inicio y con la dedicación exclusiva de nuestros expertos abogados, médicos legistas y psicólogos. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="py-12">
+      <div class="py-5">
+        <h2
+          class="text-3xl font-bold text-gray-900 md:text-4xl justify-center dark:text-white"
+        >
+          ¿Como es el procedimiento?
+        </h2>
+        <section class="py-12">
+          <Steps />
+        </section>
+
+        <details class="group">
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between font-medium text-white"
+          >
+            <span class="text-white text-lg">Leer más</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                width="24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+
+          <p class="group-open:animate-fadeIn mt-3 text-white">
+            <p class="mb-3 text-2xl text-gray-200 md:text-2xl dark:text-white">
+              Consulta Inicial
+            </p>
+            <p class="text-gray-500 dark:text-white">
+              Si crees que fuiste víctima de Mala Práxis pero no estás seguro de
+              cómo proceder o si te corresponde una indemnización por las
+              secuelas que tengas, no dudes en consultarnos por cualquiera de
+              nuestros canales de atención. Contános el caso y te daremos un
+              asesoramiento preliminar en el acto. Si consideramos que
+              corresponde avanzar con la demanda, coordinaremos una entrevista
+              formal para avanzar rápidamente con la defensa de tus derechos.
+            </p>
+          </p>
+
+          <p class="group-open:animate-fadeIn mt-3 text-white">
+            <p class="mb-3 text-2xl text-gray-200 md:text-2xl dark:text-white">
+              Primera entrevista
+            </p>
+            <p class="text-gray-500 dark:text-white">
+              En esta entrevista te escucharemos atentamente y tomaremos nota de
+              aquellos datos relevantes para el caso. Te haremos las preguntas
+              que consideremos necesarias sobre los puntos que necesitemos
+              esclarecer para comenzar a fundar la prueba. Es importante
+              recalcar que ésta entrevista puede realizarse de manera presencial
+              en el estudio o en tu domicilio, si tenés movilidad reducida por
+              algún motivo. Si lo preferís, también puede ser de manera virtual,
+              por el medio que te sea más cómodo, por ej. Llamada telefónica o
+              videollamada de Whatsapp, Zoom, etc. El objetivo de esta primera
+              entrevista es quitarte cualquier tipo de dudas y brindarte el
+              abanico de opciones disponibles para que tomes la mejor decisión.
+              A su vez ayuda a humanizar el caso, conocerte y saber de primera
+              mano la magnitud de las secuelas de la mala práxis sufrida y el
+              daño que ello pueda ocasionarte en tu vida, rutina y hábitos
+              personales, o incluso en tu patrimonio. Al finalizar podremos
+              comenzar a determinar aspectos jurídicamente importantes como: <br
+              />
+              <br />
+              ⦁ El daño sufrido<br />
+              ⦁ La relación causal.<br />
+              ⦁ El factor de Imputación<br />
+              ⦁ Los probables responsables de la mala praxis, ya sea que se trate
+              de entidades físicas (médicos) o jurídicas (clínicas, hospitales, sanatorios,
+              obras sociales, etc).<br />
+            </p>
+          </p>
+
+          <p class="group-open:animate-fadeIn mt-3 text-white">
+            <p class="mb-3 text-2xl text-gray-200 md:text-2xl dark:text-white">
+              Evaluación de la Prueba
+            </p>
+            <p class="text-gray-500 dark:text-white">
+              En estos casos el elemento más importante a nivel probatorio es la
+              Historia Clínica. La misma es una prueba documental que registra
+              la atención médica recibida por cada paciente, detallando los
+              estudios realizados, los médicos intervinientes y el tratamiento
+              realizado. Se trata de un documento de carácter personalísimo, es
+              decir, que es un derecho inherente a la persona y es por ello que
+              las Instituciones de Salud están obligadas a entregar las
+              Historias Clínicas a los pacientes que las requieran. Será
+              entonces menester hacerse rápidamente de este importante elemento
+              probatorio para someterlo al ágil análisis de nuestros expertos.
+              En caso de que la entrevista haya sido de carácter virtual podemos
+              evaluar la documental médica que se encuentre en tu poder a través
+              de imágenes, ya sea de fotografías o documentos escaneados, que
+              deberán ser enviarnos a través de nuestro correo electrónico o
+              cualquier otro medio de contacto que prefieras. Además de la
+              Historia Clínica también serán de interés otros documentos que
+              conforman la prueba como:<br />
+              ⦁ Los estudios médicos realizados en institutos de salud externos.<br
+              />
+              ⦁ Recetas médicas<br />
+              ⦁ Radiografías<br />
+              ⦁ Facturas de pago de medicamentos o tratamientos médicos.<br />
+              En caso de que la entrevista haya sido de carácter virtual podemos
+              evaluar la documental médica que se encuentra en su poder a través
+              de imágenes, ya sea de fotografías o documentos escaneados, que deberán
+              ser enviarnos a través de nuestro correo electrónico o cualquier otro
+              medio de contacto que prefieras.
+            </p>
+          </p>
+
+          <p class="group-open:animate-fadeIn mt-3 text-white">
+            <p class="mb-3 text-2xl text-gray-200 md:text-2xl dark:text-white">
+              Pericia Medica
+            </p>
+            <p class="text-gray-500 dark:text-white">
+              La Pericia Médica es un documento elaborado por un especialista
+              médico legista de excelencia con conocimientos
+              técnicos determinados para establecer un diagnóstico sobre
+              lesiones, secuelas y estado de salud del paciente; con el objeto
+              de servir como medio de prueba que permita al juez de la causa
+              dictar una sentencia ajustada a derecho, ayudando a determinar la
+              magnitud del daño. En virtud de ésta pericia surgirán los puntos
+              de controversia, y se pondrán de manifiesto los errores de
+              procedimiento, rompimiento del protocolo médico o actos de
+              negligencia, que llevaron a la mala praxis médica. Para esta
+              importante tarea pondremos a tu disposición un listado con los
+              mejores profesionales legistas que trabajan codo a codo con el
+              equipo de AJI, para que puedas elegir libremente.
+            </p>
+          </p>
+
+          <p class="group-open:animate-fadeIn mt-3 text-white">
+            <p class="mb-3 text-2xl text-gray-200 md:text-2xl dark:text-white">
+              La Mediacion
+            </p>
+            <p class="text-gray-500 dark:text-white">
+              La mediación es una etapa previa al juicio, que es obligatoria y
+              busca facilitar el diálogo entre las partes involucradas. Un
+              mediador imparcial es designado para convocar a las partes y
+              escuchar sus versiones de los hechos. A fin de facilitar el
+              cumplimiento de ésta etapa, usualmente logramos que la misma se
+              lleve a cabo en reuniones virtuales a través de plataformas como
+              Zoom y Skype, evitando así desplazamientos innecesarios. El
+              objetivo principal de la mediación en casos de mala praxis es
+              determinar si el profesional o la institución demandada cuenta con
+              el respaldo de una compañía de seguros, ya que en ese caso es la
+              compañía de seguros quien deberá responder por las acciones del
+              profesional o institución hasta un monto determinado de reclamo.
+              Durante la mediación, se presentan pruebas y surgen preguntas de
+              ambas partes, lo que da inicio a una negociación para alcanzar un
+              acuerdo satisfactorio tendiente a evitar el proceso judicial. La
+              posibilidad de llegar a un acuerdo en la mediación depende de
+              varios factores, como la distancia entre los intereses de cada
+              parte, la solidez de la compañía de seguros de que se trate y la
+              gravedad del caso. En AJI somos especialistas en negociación
+              estratégica. Acompañamos tu reclamo para que, de ser posible, se
+              resuelva en etapa de mediación, evitando así continuar con
+              procesos judiciales que pueden ser largos y engorrosos. Hasta este
+              momento nuestro servicio es totalmente gratuito y solo cobraremos
+              el 20% del total obtenido como resutado de un exitoso proceso de
+              negociación en la etapa de Mediación (y solo sí ganás el reclamo;
+              caso contrario no recibiremos nada). ¡Estamos de tu lado para
+              ayudarte!
+            </p>
+          </p>
+
+          <p class="group-open:animate-fadeIn mt-3 text-white">
+            <p class="mb-3 text-2xl text-gray-200 md:text-2xl dark:text-white">
+              La Instancia Judicial
+            </p>
+            <p class="text-gray-500 dark:text-white">
+              En caso de que la etapa de mediación no conduzca a un acuerdo,
+              deberemos proceder con una demanda por mala praxis médica en un
+              tribunal. Si bien es un proceso más largo, no hay porqué temerle:
+              nuestro equipo está ampliamente capacitado para conseguir un
+              resultado exitoso, logrando el resarcimiento merecido. Siempre
+              estaremos disponibles para evacuar cualquier duda o inquietud que
+              pudiera surgirte a lo largo del proceso judicial. Trabajaremos
+              denodadamente para obtener una sentencia justa que responda a tus
+              intereses y necesidades. En caso de ganar, nuestros honorarios son
+              del 30% del monto recibido.
+            </p>
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <h2
+        class="text-3xl font-bold text-gray-900 md:text-4xl justify-center dark:text-white mb-12"
+      >
+        Reclamos por Mala Praxis
+      </h2>
+      <div class="grid grid-cols-1 grid-rows-1 md:grid-cols-2">
+        <div
+          class="me-4 block rounded-lg bg-transparent border-primary border-solid border-l-4 shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface"
+        >
+          <div class="p-6">
+            <h5 class="mb-2 text-2xl font-medium leading-tight">
+              ¿A quien puedo reclamar?
+            </h5>
+            <p class="mb-4 text-base">
+              Medicos, Sanatorios, Obras Sociales, Aseguradoras
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="me-4 block rounded-lg bg-transparent border-primary border-solid border-l-4 shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface"
+        >
+          <div class="p-6">
+            <h5 class="mb-2 text-2xl font-medium leading-tight">
+              ¿Cual es el tiempo maximo para iniciar el reclamo?
+            </h5>
+            <p class="mb-4 text-base">3 años desde el momento del hecho</p>
+          </div>
+        </div>
+
+        <div
+          class="me-4 block rounded-lg bg-transparent border-primary border-solid border-l-4 shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface mt-4"
+        >
+          <div class="p-6">
+            <h5 class="mb-2 text-2xl font-medium leading-tight">
+              ¿Quien puede reclamar?
+            </h5>
+            <p class="mb-4 text-base">
+              El paciente o sus herederos en caso de fallecimiento.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="me-4 block rounded-lg bg-transparent border-primary border-solid border-l-4 shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface mt-4"
+        >
+          <div class="p-6">
+            <h5 class="mb-2 text-2xl font-medium leading-tight">
+              ¿A que especialidad medica puedo reclamar?
+            </h5>
+            <p class="mb-4 text-base">
+              Incluye todas las especialidades médicas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <section class="py-12">
+      <section>
+        <div
+          class="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
+        >
+          <div
+            class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
+          >
+            <div
+              class="mx-auto max-w-lg lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
+            >
+              <h2 class="text-3xl font-bold sm:text-4xl text-white">
+                Por que elegirnos?
+              </h2>
+
+              <p class="mt-4 text-lg text-gray-300">
+                En nuestro estudio jurídico, comprendemos la importancia y la sensibilidad que rodea los procesos de sucesiones. <br>
+ <br />Además, solo cobramos nuestros honorarios si
+                ganamos tu caso.
+              </p>
+
+              <a
+                href="#"
+                class="mt-8 inline-block rounded-full bg-green-500 px-12 py-3 text-lg font-bold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+              >
+                Quiero que me contacten
+              </a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-2">
+              <a
+                class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                href="#"
+              >
+                <span class="inline-block rounded-lg bg-gray-50 p-3">
+                  <svg
+                    class="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <h2 class="mt-2 font-bold text-white">
+                  Contamos con amplia experiencia en el área.
+                </h2>
+              </a>
+
+              <a
+                class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                href="#"
+              >
+                <span class="inline-block rounded-lg bg-gray-50 p-3">
+                  <svg
+                    class="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <h2 class="mt-2 font-bold text-white">
+                  Atención Personalizada a tu caso particular
+                </h2>
+              </a>
+
+              <a
+                class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                href="#"
+              >
+                <span class="inline-block rounded-lg bg-gray-50 p-3">
+                  <svg
+                    class="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <h2 class="mt-2 font-bold text-white">
+                  Trabajamos a Resultado
+                </h2>
+              </a>
+
+              <a
+                class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                href="#"
+              >
+                <span class="inline-block rounded-lg bg-gray-50 p-3">
+                  <svg
+                    class="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <h2 class="mt-2 font-bold text-white">Somos Especialistas</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="py-12">
+      <FormContaxt />
+    </section>
+  </Container>
+</Layout>
