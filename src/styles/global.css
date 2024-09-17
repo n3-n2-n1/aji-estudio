@@ -1,0 +1,32 @@
+/* Estilo para el scroll en todo el proyecto */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* Estilo de la barra de scroll (track) */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Gris claro */
+    border-radius: 10px;
+  }
+  
+  /* Estilo de la barra de scroll (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #B69126; /* Color dorado */
+    border-radius: 10px;
+    border: 2px solid #ffffff; /* Borde blanco */
+  }
+  
+  /* Estilo cuando el thumb está en hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #A6781D; /* Dorado más oscuro cuando el usuario interactúa */
+  }
+  
+  /* Estilo del scroll en Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #B69126 #f1f1f1;
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  

@@ -2,20 +2,20 @@
 import Container from "../components/Container.astro";
 import FormContaxt from "../components/FormContaxt.astro";
 import Layout from "../layouts/Layout.astro";
-const pageData = {
-  title: "Accidentes de Trabajo",
-  description: "Protecciones del ambiente laboral.",
-  features: [
-    "Cobertura legal",
-    "Apoyo en litigios",
-    "Protección contra negligencia",
-  ],
-};
+import toggleFAQ from "../components/toggleFAQ.astro";
 ---
 
 
 <Layout>
   <Container>
+    <style>
+      .faq-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+}
+
+    </style>
     <section>
       <div class="relative" id="home">
         <div
@@ -71,6 +71,8 @@ const pageData = {
         </div>
       </div>
     </section>
+
+    
 
     <section class="mt-8 mb-8 flex items-center justify-center border-b-2 p-12 border-x-slate-900">
       <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 justify-center">
@@ -161,7 +163,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   Deberás comunicarlo a tu empleador, para que éste denuncie el
                   accidente o enfermedad laboral a la ART. En caso que se niegue
                   a denunciarlo es recomendable buscar el asesoramiento de un
@@ -207,7 +209,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   Deberás comunicarlo a tu empleador, para que éste denuncie el
                   accidente o enfermedad laboral a la ART. En caso que se niegue
                   a denunciarlo es recomendable buscar el asesoramiento de un
@@ -253,7 +255,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   Deberás comunicarlo a tu empleador, para que éste denuncie el
                   accidente o enfermedad laboral a la ART. En caso que se niegue
                   a denunciarlo es recomendable buscar el asesoramiento de un
@@ -299,7 +301,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   Deberás comunicarlo a tu empleador, para que éste denuncie el
                   accidente o enfermedad laboral a la ART. En caso que se niegue
                   a denunciarlo es recomendable buscar el asesoramiento de un
@@ -345,7 +347,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   En estos casos se debe informar al empleador para que este
                   inste el reingreso a la ART, pero si se niega a hacerlo no
                   dudes en contactarnos para solicitar directamente el reingreso
@@ -390,7 +392,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   Our insurance plans are customizable. You can tailor your
                   coverage to meet your specific needs and budget.
                 </div>
@@ -431,7 +433,7 @@ const pageData = {
               class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
-              <div class="pb-5 leading-relaxed">
+              <div class="pb-5 leading-relaxed text-white">
                 <div class="space-y-2 leading-relaxed">
                   There may be a waiting period for certain insurance claims,
                   depending on the policy terms and conditions. Please refer to
@@ -443,19 +445,6 @@ const pageData = {
         </ul>
       </div>
 
-      <script>
-        function toggleFAQ(button) {
-          const content = button.nextElementSibling;
-          button.setAttribute(
-            "aria-expanded",
-            button.getAttribute("aria-expanded") === "false" ? "true" : "false"
-          );
-          content.style.maxHeight =
-            button.getAttribute("aria-expanded") === "true"
-              ? content.scrollHeight + "px"
-              : "0";
-        }
-      </script>
     </section>
 
     <section class="py-4">
@@ -481,23 +470,23 @@ const pageData = {
 
               <a
                 href="#"
-                class="mt-8 inline-block rounded-full bg-primary px-12 py-3 text-lg font-bold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                class="mt-8 inline-block rounded-full bg-primary px-12 py-3 text-lg font-bold text-white transition hover:bg-green-500 focus:outline-none focus:ring focus:ring-yellow-400 "
               >
                 Consultanos por WhatsApp
               </a>
             </div>
 
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-2">
-              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-blue-500 dark:shadow-neutral-700/70">
+              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-primary dark:shadow-neutral-700/70">
                 <div class="p-4 md:p-5">
                   <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-                    Card title
+                    Trabajamos a Resultado
                   </h3>
                   <p class="mt-2 text-gray-500 dark:text-neutral-400">
-                    With supporting text below as a natural lead-in to additional content.
+                    Solo cobramos en el caso de una resolución exitosa a tu favor.
                   </p>
-                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600" href="#">
-                    Card link
+                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-primary decoration-2 hover:text-primary hover:underline focus:underline focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary dark:focus:text-primary" href="/">
+                    Saber más
                     <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="m9 18 6-6-6-6"></path>
                     </svg>
@@ -505,16 +494,16 @@ const pageData = {
                 </div>
               </div>
 
-              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-blue-500 dark:shadow-neutral-700/70">
+              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-primary dark:shadow-neutral-700/70">
                 <div class="p-4 md:p-5">
                   <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-                    Card title
+                    Somos Expertos
                   </h3>
                   <p class="mt-2 text-gray-500 dark:text-neutral-400">
-                    With supporting text below as a natural lead-in to additional content.
+                    Tenemos expertise en el área y un camino transitado que nos brinda amplia experiencia.
                   </p>
-                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600" href="#">
-                    Card link
+                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-primary decoration-2 hover:text-primary hover:underline focus:underline focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary dark:focus:text-primary" href="/">
+                    Saber más
                     <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="m9 18 6-6-6-6"></path>
                     </svg>
@@ -522,32 +511,32 @@ const pageData = {
                 </div>
               </div>
 
-              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-blue-500 dark:shadow-neutral-700/70">
+              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-primary dark:shadow-neutral-700/70">
                 <div class="p-4 md:p-5">
                   <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-                    Card title
+                    Amplia Experiencia
                   </h3>
                   <p class="mt-2 text-gray-500 dark:text-neutral-400">
-                    With supporting text below as a natural lead-in to additional content.
+                    Nuestro equipo está formado por personal requerido para cada situación en particular.
                   </p>
-                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600" href="#">
-                    Card link
+                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-primary decoration-2 hover:text-primary hover:underline focus:underline focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary dark:focus:text-primary" href="/">
+                    Saber más
                     <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="m9 18 6-6-6-6"></path>
                     </svg>
                   </a>
                 </div>
               </div>
-              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-blue-500 dark:shadow-neutral-700/70">
+              <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-t-primary dark:shadow-neutral-700/70">
                 <div class="p-4 md:p-5">
                   <h3 class="text-lg font-bold text-gray-800 dark:text-white">
-                    Card title
+                    Atención Personalizada
                   </h3>
                   <p class="mt-2 text-gray-500 dark:text-neutral-400">
-                    With supporting text below as a natural lead-in to additional content.
+                    Contamos con seguimiento integral sobre tu caso hasta la resolución final.
                   </p>
-                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-none focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600" href="#">
-                    Card link
+                  <a class="mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-primary decoration-2 hover:text-primary hover:underline focus:underline focus:outline-none focus:text-primary disabled:opacity-50 disabled:pointer-events-none dark:text-primary dark:hover:text-primary dark:focus:text-primary" href="/">
+                    Saber más
                     <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="m9 18 6-6-6-6"></path>
                     </svg>
@@ -628,7 +617,7 @@ const pageData = {
             <h5 class="mb-2 text-2xl font-medium leading-tight">
               ¿A qué se considera Enfermedad Profesional?
             </h5>
-            <p class="mb-4 text-base">
+            <p class="mb-4 text-base dark:text-white">
               La Enfermedad Profesional es aquella producida por causa del lugar
               o del tipo de trabajo. Hay tareas específicas que luego de un
               tiempo dejan huella en el cuerpo del trabajador, produciendo
@@ -647,5 +636,31 @@ const pageData = {
     <section class="py-4">
       <FormContaxt />
     </section>
+
+
+    
   </Container>
 </Layout>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      button.setAttribute(
+        "aria-expanded",
+        button.getAttribute("aria-expanded") === "false" ? "true" : "false"
+      );
+      content.style.maxHeight =
+        button.getAttribute("aria-expanded") === "true"
+          ? content.scrollHeight + "px"
+          : "0";
+    }
+    
+    document.querySelectorAll('button[onclick]').forEach(btn => {
+      btn.addEventListener('click', function() {
+        toggleFAQ(this);
+      });
+    });
+  });
+</script>

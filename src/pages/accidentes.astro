@@ -62,7 +62,7 @@ const pageData = {
                 >
               </a>
               <a
-                href="/#solutions"
+                href="#faq"
                 class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
               >
                 <span
@@ -283,7 +283,7 @@ const pageData = {
     </section>
 
 
-    <section>
+    <section id="faq">
       <div class="py-24 mx-auto flex flex-col md:flex-row gap-12">
         <div class="flex flex-col text-left basis-1/2">
           <p class="inline-block font-semibold text-primary mb-4">
@@ -331,7 +331,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   Si te encuentras involucrado en un accidente de tránsito, ya
                   sea como peatón, conductor o pasajero de un vehículo público o
                   privado, lo primordial es recopilar información detallada del
@@ -405,7 +405,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   El afectado por el accidente tendrá la posibilidad de reclamar
                   indemnización por lesiones físicas causadas por el siniestro.
                   Asimismo, quien haya asumido gastos médicos en representación
@@ -503,7 +503,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   La persona que haya sufrido lesiones como consecuencia de un
                   accidente de tránsito tiene derecho a reclamar: El daño físico
                   El daño psicológico. El daño moral. El daño estético. El
@@ -564,7 +564,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   En general, las compañías de seguro tienden a ofrecer una
                   indemnización más elevada cuando el reclamo por un siniestro
                   se presenta a través de un abogado, en comparación con un
@@ -616,7 +616,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   Por lo general van desde los 90 a los 180 días, tanto los
                   reclamos extrajudiciales con abogado y los reclamos
                   administrativos (directamente por el accidentado en la
@@ -664,7 +664,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   La suma a pagar, por lo general, será mayor iniciando acciones
                   legales; pero existen casos particulares en donde es
                   conveniente efectuar el reclamo administrativo simple y no se
@@ -714,7 +714,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   No es recomendable reparar el vehículo hasta que lo
                   inspeccione la compañía de seguros que deberá cubrir el
                   siniestro. En caso que necesite repararlo en forma urgente,
@@ -801,7 +801,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   Es fundamental que guarde todo tipo de documentación, como ser
                   órdenes médicas, recetas, comprobantes de turnos médicos,
                   recibos o facturas por gastos hechos en atención médica o
@@ -848,7 +848,7 @@ const pageData = {
               style="transition: max-height 0.3s ease-in-out 0s;"
             >
               <div class="pb-5 leading-relaxed">
-                <div class="space-y-2 leading-relaxed">
+                <div class="space-y-2 leading-relaxed text-white">
                   El latigazo cervical es una de las lesiones más frecuentes en
                   accidentes de tránsito, ya sea por impactos frontales,
                   laterales o colisiones por detrás. Las compañías de seguro
@@ -882,19 +882,6 @@ const pageData = {
         </ul>
       </div>
 
-      <script>
-        function toggleFAQ(button) {
-          const content = button.nextElementSibling;
-          button.setAttribute(
-            "aria-expanded",
-            button.getAttribute("aria-expanded") === "false" ? "true" : "false"
-          );
-          content.style.maxHeight =
-            button.getAttribute("aria-expanded") === "true"
-              ? content.scrollHeight + "px"
-              : "0";
-        }
-      </script>
     </section>
 
     <section class="py-4">
@@ -937,3 +924,26 @@ const pageData = {
     </section>
   </Container>
 </Layout>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      button.setAttribute(
+        "aria-expanded",
+        button.getAttribute("aria-expanded") === "false" ? "true" : "false"
+      );
+      content.style.maxHeight =
+        button.getAttribute("aria-expanded") === "true"
+          ? content.scrollHeight + "px"
+          : "0";
+    }
+    
+    document.querySelectorAll('button[onclick]').forEach(btn => {
+      btn.addEventListener('click', function() {
+        toggleFAQ(this);
+      });
+    });
+  });
+</script>
