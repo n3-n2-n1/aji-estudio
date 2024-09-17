@@ -1,12 +1,292 @@
 ---
-// src/pages/mala-praxis.astro
-import InformativePage from '../layouts/InformativePage.astro';
-
-const pageData = {
-  title: "Terminos y Condiciones",
-  description: "Protección para profesionales de la salud.",
-  features: ["Cobertura legal", "Apoyo en litigios", "Protección contra negligencia"],
-};
-
+import Layout from "../layouts/Layout.astro";
+import FormContaxt from "../components/FormContaxt.astro";
+import Container from "../components/Container.astro";
 ---
-<InformativePage {...pageData} />
+
+
+
+<Layout>
+  <Container>
+    <section>
+      <div class="relative" id="home">
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+        >
+          <div
+            class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"
+          >
+          </div>
+          <div
+            class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
+          >
+          </div>
+        </div>
+        <div class="relative pt-36 ml-auto">
+          <div class="lg:w-3/3 text-center mx-auto">
+            <h1
+              class="text-gray-900 dark:text-white font-bold text-5xl md:text-md xl:text-md"
+            >
+              Asistencia Integral Juridica en <span
+                class="text-primary dark:text-white select-text"
+              >
+                Seguros</span
+              >
+            </h1>
+            <p class="mt-8 text-gray-500 dark:text-gray-300 text-lg">
+              En nuestro estudio jurídico, ofrecemos un servicio especializado en el área de seguros. <br>
+              Colaboramos estrechamente con expertos en seguros para brindarte una asesoría completa.
+            </p>
+            <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+              <a
+                href="#"
+                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+              >
+                <span class="relative text-base font-semibold text-white"
+                  >Contactanos</span
+                >
+              </a>
+              <a
+                href="#"
+                class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
+              >
+                <span
+                  class="relative text-base font-semibold text-primary dark:text-white"
+                  >Quiero saber más</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8 lg:py-16">
+        <h2 class="text-3xl font-bold sm:text-4xl text-white mb-8">Condiciones del Servicio</h2>
+
+        <div class="text-gray-500 dark:text-gray-300 space-y-6">
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">1. Confidencialidad</h3>
+          <p>
+            En AJI Estudio, todos los datos e información proporcionada por el cliente serán tratados con la más estricta confidencialidad, cumpliendo con lo dispuesto en la legislación de protección de datos personales. Ninguna información será divulgada a terceros sin el consentimiento previo del cliente, salvo que sea requerido por ley.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">2. Alcance del Servicio</h3>
+          <p>
+            El servicio de asesoramiento jurídico integral incluye la evaluación inicial del caso, el análisis jurídico detallado y las recomendaciones legales pertinentes. En caso de que el cliente requiera la representación legal en juicio, se formalizará un acuerdo aparte detallando los honorarios y condiciones específicos.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">3. Honorarios y Pagos</h3>
+          <p>
+            Los honorarios de nuestros servicios serán acordados previamente con el cliente en base a la complejidad del caso y los recursos requeridos. Los pagos deben ser realizados dentro del plazo establecido en el acuerdo de servicios.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">4. Limitación de Responsabilidad</h3>
+          <p>
+            AJI Estudio no garantiza un resultado específico en los casos sometidos, ya que la resolución de los mismos depende de múltiples factores ajenos a nuestro control, como la interpretación judicial o las circunstancias del caso.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">5. Terminación del Contrato</h3>
+          <p>
+            Ambas partes pueden dar por terminado el contrato de asesoramiento en cualquier momento, mediante una notificación por escrito. El cliente será responsable de abonar los honorarios por los servicios prestados hasta la fecha de terminación.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">6. Resolución de Conflictos</h3>
+          <p>
+            En caso de cualquier disputa o conflicto derivado del presente contrato, ambas partes acuerdan someterse a la jurisdicción de los tribunales de Argentina.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="mt-12 items-center justify-center mb-12">
+      <div
+        class="flex space-x-4 divide-x-0 divide-gray-100 dark:divide-gray-800"
+      >
+        <div class="flex gap-4 md:items-center">
+          <div class="w-5/6">
+            <h4
+              class="font-semibold text-lg text-gray-700 dark:text-indigo-300"
+            >
+              Consultanos Gratis
+            </h4>
+            <p class="text-gray-500 dark:text-gray-400">
+          Con un enfoque personalizado y atención a los detalles, nos aseguramos de que los derechos de todos los involucrados sean protegidos, 
+          facilitando un proceso transparente y justo.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 md:items-center">
+          <div class="w-5/6">
+            <h4
+              class="font-semibold text-lg text-gray-700 dark:text-indigo-300"
+            >
+              Cobramos solo si ganás
+            </h4>
+            <p class="text-gray-500 dark:text-gray-400">
+          Ya sea que se trate de un conflicto o litigio, nuestro equipo de profesionales está preparado para ofrecerte la tranquilidad y el respaldo legal que necesitas.<br /> 
+          
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="py-12">
+      <section>
+        <div
+          class="max-w-screen-xl py-8 sm:py-12  lg:py-16"
+        >
+          <div
+            class="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16"
+          >
+            <div
+              class="mx-auto max-w-lg lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
+            >
+              <h2 class="text-3xl font-bold sm:text-4xl text-white">
+                Por que elegirnos?
+              </h2>
+
+              <p class="mt-4 text-lg text-gray-300">
+                Ya sea que necesites apoyo en la interpretación de las condiciones de tu seguro, defensa ante conflictos con aseguradoras o asistencia en la gestión de reclamos. <br>
+ <br />Nuestro equipo de abogados está preparado para proteger intereses.
+        
+              </p>
+
+              <a
+                href="https://wa.me/5491157213143"
+                class="mt-8 inline-block rounded-full bg-green-500 px-12 py-3 text-lg font-bold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+              >
+                Quiero que me contacten
+              </a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-2">
+              <a
+                class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                href="#"
+              >
+                <span class="inline-block rounded-lg bg-gray-50 p-3">
+                  <svg
+                    class="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <h2 class="mt-2 font-bold text-white">
+                  Contamos con amplia experiencia en el área.
+                </h2>
+              </a>
+
+              <a
+                class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                href="#"
+              >
+                <span class="inline-block rounded-lg bg-gray-50 p-3">
+                  <svg
+                    class="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <h2 class="mt-2 font-bold text-white">
+                  Atención Personalizada a tu caso particular
+                </h2>
+              </a>
+
+              <a
+                class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                href="#"
+              >
+                <span class="inline-block rounded-lg bg-gray-50 p-3">
+                  <svg
+                    class="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <h2 class="mt-2 font-bold text-white">
+                  Trabajamos a Resultado
+                </h2>
+              </a>
+
+              <a
+                class="block rounded-xl border border-gray-100 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
+                href="#"
+              >
+                <span class="inline-block rounded-lg bg-gray-50 p-3">
+                  <svg
+                    class="size-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                    ></path>
+                  </svg>
+                </span>
+
+                <h2 class="mt-2 font-bold text-white">Somos Especialistas</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </Container>
+</Layout>
