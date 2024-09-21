@@ -27,7 +27,11 @@
   scrollbar-color: #B69126 #f1f1f1;
   
   html {
+    font-family: Urbanist, sans-serif;
     scroll-behavior: smooth;
     
   }
+  body {
+		margin: 0;
+	}
   
