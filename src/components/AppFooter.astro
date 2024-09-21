@@ -5,38 +5,37 @@ import Container from "../components/Container.astro";
 <footer class="pb-20 md:py-40 bg-gray-50 dark:bg-gray-900">
   <Container>
     <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
-      <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
+      <div class="flex flex-col md:flex-row items-center justify-between">
         <!-- Menú de enlaces -->
-        <div
-          class="flex w-full justify-center space-x-8 text-gray-600 dark:text-gray-300 sm:w-7/12 md:justify-start"
-        >
-          <ul class="list-inside list-disc space-y-8">
-            <li><a href="/" class="transition hover:text-primary">Inicio</a></li>
-            <li><a href="/riesgos-trabajo" class="transition hover:text-primary">ART</a></li>
-            <li><a href="/mala-praxis" class="transition hover:text-primary">Mala Praxis</a></li>
-          </ul>
-          <ul class="list-inside list-disc space-y-8">
-
-            <li><a href="/seguros" class="transition hover:text-primary">Seguros</a></li>
-            <li><a href="/sucesiones" class="transition hover:text-primary">Sucesiones</a></li>
-            <li><a href="/accidentes" class="transition hover:text-primary">Accidentes</a></li>
-          </ul>
+        <div class="w-full md:w-7/12">
+          <div class="flex justify-center md:justify-start space-x-8 text-gray-600 dark:text-gray-300">
+            <ul class="space-y-4">
+              <li><a href="/" class="transition hover:text-primary">Inicio</a></li>
+              <li><a href="/riesgos-trabajo" class="transition hover:text-primary">ART</a></li>
+              <li><a href="/mala-praxis" class="transition hover:text-primary">Mala Praxis</a></li>
+            </ul>
+            <ul class="space-y-4">
+              <li><a href="/seguros" class="transition hover:text-primary">Seguros</a></li>
+              <li><a href="/sucesiones" class="transition hover:text-primary">Sucesiones</a></li>
+              <li><a href="/accidentes" class="transition hover:text-primary">Accidentes</a></li>
+            </ul>
+          </div>
         </div>
 
         <!-- Información y Copyright -->
-        <div class="m-auto mt-16 w-10/12 space-y-6 text-center sm:mt-auto sm:w-5/12 sm:text-left">
-          <div class="flex justify-between items-center">
-            <!-- Logo a la derecha -->
-            <a href="/" class="block">
-              <img src="/logo.svg" alt="Logo" class="w-12 h-auto" />
+        <div class="w-full md:w-5/12 mt-12 md:mt-0 text-center md:text-left">
+          <!-- Logo -->
+          <div class="flex justify-center md:justify-end mb-6">
+            <a href="/">
+              <img src="/logo.svg" alt="Logo" class="w-16 h-auto" />
             </a>
           </div>
 
           <!-- Enlaces secundarios -->
-          <div class="flex flex-col sm:flex-row sm:justify-between text-gray-600 dark:text-gray-300 mt-4 text-sm">
+          <div class="flex flex-col sm:flex-row sm:justify-between text-gray-600 dark:text-gray-300 text-sm space-y-4 sm:space-y-0">
             <a href="/terminos" class="transition hover:text-primary">Términos</a>
-            <a href="/terminos" class="transition hover:text-primary">Políticas</a>
-            <a href="/" class="transition hover:text-primary">Nosotros</a>
+            <a href="/politicas" class="transition hover:text-primary">Políticas</a>
+            <a href="/nosotros" class="transition hover:text-primary">Nosotros</a>
           </div>
 
           <!-- Texto de pie de página -->
@@ -46,3 +45,5 @@ import Container from "../components/Container.astro";
         </div>
       </div>
     </div>
+  </Container>
+</footer>
