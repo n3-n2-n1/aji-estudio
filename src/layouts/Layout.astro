@@ -40,20 +40,38 @@ import "../styles/global.css";  // Importa tu archivo CSS global aquí
 		<link rel="apple-touch-icon" href="/icons/logo-192x192.png">
 		<link rel="manifest" href="/manifest.json">
 		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+		  
 	</head>
 	<body class="bg-white dark:bg-gray-900">
+		<button id="toggle-theme" style="display:none">Cambiar Tema</button>
 		<AppHeader/>
 		<slot />
 		<AppFooter/>
+		<script>
+			const themeToggleButton = document.getElementById('toggle-theme');
+			
+			// Forzar el tema oscuro al cargar la página
+			if (!localStorage.getItem('theme')) {
+			  localStorage.setItem('theme', 'dark');
+			}
+			
+			if (localStorage.getItem('theme') === 'dark') {
+			  document.documentElement.classList.add('dark');
+			}
+		  
+			// Función para cambiar entre temas
+			themeToggleButton.addEventListener('click', () => {
+			  const currentTheme = localStorage.getItem('theme');
+			  
+			  if (currentTheme === 'dark') {
+				document.documentElement.classList.remove('dark');
+				localStorage.setItem('theme', 'light');
+			  } else {
+				document.documentElement.classList.add('dark');
+				localStorage.setItem('theme', 'dark');
+			  }
+			});
+		  </script>
 	</body>
 </html>
-<style>
-	html {
-		font-family: Urbanist, sans-serif;
-		scroll-behavior: smooth;
-	}
-
-	body {
-		margin: 0;
-	}
-</style>
