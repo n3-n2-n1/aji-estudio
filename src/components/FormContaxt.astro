@@ -2,31 +2,33 @@
 import Container from "./Container.astro";
 const stats = {
   title: "+650 Casos en LATAM",
-  content:
-    "Aquí puedes colocar alguna información relevante o estadísticas importantes.",
+  content: "Aquí puedes colocar alguna información relevante o estadísticas importantes.",
 };
 const avatars = [
   {
     name: 'Ryan Florence',
-    url: 'https://bit.ly/ryan-florence',
   },
   {
     name: 'Segun Adebayo',
-    url: 'https://bit.ly/sage-adebayo',
   },
   {
     name: 'Kent Dodds',
-    url: 'https://bit.ly/kent-c-dodds',
   },
   {
     name: 'Prosper Otemuyiwa',
-    url: 'https://bit.ly/prosper-baba',
   },
   {
     name: 'Christian Nwamba',
-    url: 'https://bit.ly/code-beast',
   },
-]
+];
+
+// Función para obtener las iniciales
+const getInitials = (name) => {
+  return name
+    .split(" ")
+    .map((n) => n[0].toUpperCase())
+    .join("");
+};
 ---
 
 <Container>
@@ -43,13 +45,8 @@ const avatars = [
         <div class="flex items-center space-x-4 z-20">
           <div class="flex -space-x-4">
             {avatars.map((avatar) => (
-              <div key={avatar.name} className="relative">
-                <img
-                  src={avatar.url}
-                  alt={avatar.name}
-                  class="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-white z-10"
-                />
-                <div class="absolute inset-0 rounded-full bg-gradient-to-bl  transform scale-125 -z-10"></div>
+              <div key={avatar.name} class="relative flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-white text-white font-bold bg-primary z-10">
+                {getInitials(avatar.name)}
               </div>
             ))}
           </div>
@@ -69,36 +66,38 @@ const avatars = [
             </span>
           </h2>
         </div>
-        <form class="space-y-4">
-          <div class="space-y-4">
-            <input
-              type="text"
-              placeholder="Nombre Completo"
-              class="w-full bg-gray-100 border-0 text-gray-500 p-3 rounded-lg placeholder-gray-500"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              class="w-full bg-gray-100 border-0 text-gray-500 p-3 rounded-lg placeholder-gray-500"
-            />
-            <input
-              type="tel"
-              placeholder="Número de contacto"
-              class="w-full bg-gray-100 border-0 text-gray-500 p-3 rounded-lg placeholder-gray-500"
-            />
-            <input
+        <form class="space-y-4" method="POST" action="/api/send-email" onsubmit="handleSubmit(event)">
+          <input
             type="text"
-            
+            name="name"
+            placeholder="Nombre Completo"
+            class="w-full bg-gray-100 border-0 text-gray-500 p-3 rounded-lg placeholder-gray-500"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="w-full bg-gray-100 border-0 text-gray-500 p-3 rounded-lg placeholder-gray-500"
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Número de contacto"
+            class="w-full bg-gray-100 border-0 text-gray-500 p-3 rounded-lg placeholder-gray-500"
+          />
+          <input
+            type="text"
+            name="message"
             placeholder="Contanos tu caso"
             class="w-full bg-gray-100 border-0 text-gray-500 p-3 rounded-lg placeholder-gray-500 pb-24"
           />
-          </div>
           <button
             type="submit"
             class="w-full font-heading mt-8 py-3 font-semibold rounded-full bg-primary text-white hover:bg-[#A6781D] shadow-xl">
             Contactanos
           </button>
         </form>
+        
       </div>
     </div>
 
@@ -117,7 +116,6 @@ const avatars = [
       <circle cx="196.5" cy="317.5" r="101.5" fill="#D4A02A" /> <!-- Dorado más brillante -->
       <circle cx="70.5" cy="458.5" r="101.5" fill="#B69126" /> <!-- Dorado principal -->
       <circle cx="426.5" cy="-0.5" r="101.5" fill="#A6781D" /> <!-- Dorado oscuro -->
-      
       </svg>
     </div>
   </div>

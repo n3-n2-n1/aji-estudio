@@ -1,0 +1,20 @@
+---
+// src/pages/error.astro
+import Container from "../components/Container.astro";
+---
+
+<Container>
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-red-400 to-orange-500">
+    <div class="bg-white p-10 rounded-lg shadow-lg max-w-md text-center">
+      <h1 class="text-4xl font-bold text-gray-800">¡Oops! Algo salió mal</h1>
+      <p class="mt-4 text-gray-600">Parece que hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.</p>
+      
+      <svg class="w-16 h-16 text-red-500 mx-auto my-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      
+      <a href="/" class="mt-4 inline-block bg-primary text-white px-6 py-2 rounded-full shadow-md hover:bg-[#A6781D]">Volver al inicio</a>
+    </div>
+  </div>
+</Container>
+    
