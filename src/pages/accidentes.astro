@@ -21,63 +21,63 @@ import WpFloat from "../components/WpFloat.astro";
 const cardData = [
   {
     title: "¿Sufriste un Accidente de Tránsito?",
-    image: "images/accident2.png",
+    image: "images/accident2.webp",
     description: "Si fuiste víctima de un accidente de tránsito mientras conducías, podés reclamar por los daños físicos y materiales sufridos.",
     linkText: "Saber más",
     link: "#faq"
   },
   {
     title: "¿Tuviste Lesiones?",
-    image: "images/accident5.png",
+    image: "images/accident5.webp",
     description: "Recibir atención médica inmediata es crucial, incluso si los golpes parecen leves. Es indispensable para poder reclamar.",
     linkText: "Saber más",
     link: "#faq"
   },
   {
     title: "¿Quién tuvo la culpa del accidente?",
-    image: "images/accident8.png",
+    image: "images/accident8.webp",
     description: "Determinar la responsabilidad del accidente puede ser complejo. ¡Consultanos gratis para asesoramiento personalizado!",
     linkText: "Saber más",
     link: "#faq"
   },
   {
     title: "Accidente de moto",
-    image: "images/accident1.png",
+    image: "images/accident1.webp",
     description: "Todo motociclista y acompañante tiene derecho a reclamar por las lesiones sufridas en un accidente de tránsito. ¡Te ayudamos!",
     linkText: "Saber más",
     link: "#faq"
   },
   {
     title: "¿Ibas de acompañante y sufriste lesiones?",
-    image: "images/accident4.png",
+    image: "images/accident4.webp",
     description: "Podés reclamar por las lesiones sufridas como acompañante en un accidente de tránsito. Consultanos para más información.",
     linkText: "Saber más",
     link: "#faq"
   },
   {
     title: "Peatón atropellado",
-    image: "images/accident9.png",
+    image: "images/accident9.webp",
     description: "Los peatones y ciclistas son los más vulnerables. Si sufriste un accidente, podés reclamar por las lesiones. ¡Consultanos!",
     linkText: "Saber más",
     link: "#faq"
   },
   {
     title: "Accidente en transporte público",
-    image: "images/accident3.png",
+    image: "images/accident3.webp",
     description: "Si viajabas en transporte público y sufriste lesiones, tenés derecho a una indemnización. ¡Contactanos para más detalles!",
     linkText: "Saber más",
     link: "#faq"
   },
   {
     title: "¿No llevabas casco?",
-    image: "images/accident6.png",
+    image: "images/accident6.webp",
     description: "A pesar de no llevar casco, podés reclamar una indemnización justa. Contactanos y te asesoraremos a la brevedad.",
     linkText: "Saber más",
     link: "#faq"
   },
   {
     title: "¿No tenías seguro o registro de conducir?",
-    image: "images/accident7.png",
+    image: "images/accident7.webp",
     description: "Aunque no tuvieras seguro o registro al momento del accidente, aún podés reclamar una indemnización. ¡Te asesoramos!",
     linkText: "Saber más",
     link: "#faq"
@@ -146,26 +146,32 @@ const cardData = [
       </div>
     </section>
 
-    <section>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8 md:px-8 sm: px-8 ">
-        <!-- Mapea las tarjetas a partir de los datos -->
-        {cardData.map((card) => (
-          <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-primary dark:shadow-neutral-700/70">
-            <img class="w-full h-48 object-cover rounded-t-xl" src={card.image} alt={card.title} />
-            <div class="p-4 md:p-5 flex flex-col flex-1">
-              <h3 class="text-lg font-bold text-gray-800 dark:text-white">{card.title}</h3>
-              <p class="mt-2 text-gray-500 dark:text-neutral-400 flex-grow">{card.description}</p>
-              <a class="mt-4 inline-flex items-center gap-x-1 text-sm font-semibold text-primary hover:text-primary hover:underline focus:underline" href={card.link}>
-                {card.linkText}
-                <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m9 18 6-6-6-6"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        ))}
+<section class="flex sm:px-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8 md:px-2 sm:px-8 justify-center mx-auto ">
+    <!-- Mapea las tarjetas a partir de los datos -->
+    {cardData.map((card) => (
+      <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70" key={card.title}>
+        <picture>
+          <source srcSet={`${card.image}`} type="image/webp" />
+          <source srcSet={card.image} type="image/png" /> {/* Fallback */}
+          <img class="w-full h-48 object-cover rounded-t-xl" src={card.image} alt={card.title} loading="lazy" />
+        </picture>
+        <div class="p-4 md:p-5 flex flex-col flex-1">
+          <h3 class="text-lg font-bold text-gray-800 dark:text-white">{card.title}</h3>
+          <p class="mt-2 text-gray-500 dark:text-neutral-400 flex-grow">{card.description}</p>
+          <a class="mt-4 inline-flex items-center gap-x-1 text-sm font-semibold text-primary hover:text-primary hover:underline focus:underline" href={card.link}>
+            {card.linkText}
+            <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </a>
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
+
+    
     
     
 
