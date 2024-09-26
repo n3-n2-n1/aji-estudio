@@ -1,0 +1,63 @@
+<section class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl" id="cookie-banner">
+    <h2 class="font-semibold text-gray-800 dark:text-white text-sm">🍪 Cookies</h2>
+  
+    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+      Usamos cookies para mejorar la experiencia. </br>
+      <a href="/politicas-cookies" class="text-blue-500 hover:underline">Políticas</a>.
+    </p>
+    
+    <div class="flex items-center justify-between mt-4 gap-x-4 shrink-0">
+      <button id="reject-cookies" class="text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
+        No consiento
+      </button>
+  
+      <button id="accept-cookies" class="text-xs bg-gray-900 font-medium rounded-lg hover:bg-gray-700 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+        Acepto
+      </button>
+    </div>
+  </section>
+  
+  <script>
+    // Ejecutar solo en el lado del cliente
+    document.addEventListener('DOMContentLoaded', () => {
+      const cookieBanner = document.getElementById('cookie-banner');
+      const acceptButton = document.getElementById('accept-cookies');
+      const rejectButton = document.getElementById('reject-cookies');
+  
+      // Verificar si el usuario ya ha tomado una decisión
+      const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+  
+      // Mostrar banner si el usuario no ha aceptado/rechazado
+      if (!cookiesAccepted) {
+        cookieBanner.style.display = 'block';
+      } else {
+        cookieBanner.style.display = 'none';
+      }
+  
+      // Función para aceptar cookies
+      acceptButton.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.style.display = 'none';
+        // Aquí podrías activar Google Analytics u otras herramientas de seguimiento
+        enableTracking();
+      });
+  
+      // Función para rechazar cookies
+      rejectButton.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'false');
+        cookieBanner.style.display = 'none';
+      });
+  
+      function enableTracking() {
+        // Ejemplo para Google Analytics u otras herramientas de seguimiento
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+        ga('create', 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID', 'auto');
+        ga('send', 'pageview');
+      }
+    });
+  </script>
+  

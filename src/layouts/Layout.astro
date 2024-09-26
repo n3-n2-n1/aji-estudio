@@ -2,6 +2,8 @@
 import AppFooter from "../components/AppFooter.astro";
 import AppHeader from "../components/AppHeader.astro"
 import "../styles/global.css";  // Importa tu archivo CSS global aquí
+import CookieBanner from "../components/Cookies.astro"
+
 ---
 
 
@@ -46,10 +48,14 @@ import "../styles/global.css";  // Importa tu archivo CSS global aquí
 	<body class="bg-white dark:bg-gray-900">
 		<button id="toggle-theme" style="display:none">Cambiar Tema</button>
 		<AppHeader/>
+	<!-- Mostrar el loader inicialmente -->
+		
 		<slot />
+		<CookieBanner />
 		<AppFooter/>
 		<script>
-			const themeToggleButton = document.getElementById('toggle-theme');
+
+					const themeToggleButton = document.getElementById('toggle-theme');
 			
 			// Forzar el tema oscuro al cargar la página
 			if (!localStorage.getItem('theme')) {
