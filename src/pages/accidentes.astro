@@ -17,6 +17,73 @@ const pageData = {
   ],
 };
 import WpFloat from "../components/WpFloat.astro";
+
+const cardData = [
+  {
+    title: "¿Sufriste un Accidente de Tránsito?",
+    image: "images/accident2.png",
+    description: "Si fuiste víctima de un accidente de tránsito mientras conducías, podés reclamar por los daños físicos y materiales sufridos.",
+    linkText: "Saber más",
+    link: "#faq"
+  },
+  {
+    title: "¿Tuviste Lesiones?",
+    image: "images/accident5.png",
+    description: "Recibir atención médica inmediata es crucial, incluso si los golpes parecen leves. Es indispensable para poder reclamar.",
+    linkText: "Saber más",
+    link: "#faq"
+  },
+  {
+    title: "¿Quién tuvo la culpa del accidente?",
+    image: "images/accident8.png",
+    description: "Determinar la responsabilidad del accidente puede ser complejo. ¡Consultanos gratis para asesoramiento personalizado!",
+    linkText: "Saber más",
+    link: "#faq"
+  },
+  {
+    title: "Accidente de moto",
+    image: "images/accident1.png",
+    description: "Todo motociclista y acompañante tiene derecho a reclamar por las lesiones sufridas en un accidente de tránsito. ¡Te ayudamos!",
+    linkText: "Saber más",
+    link: "#faq"
+  },
+  {
+    title: "¿Ibas de acompañante y sufriste lesiones?",
+    image: "images/accident4.png",
+    description: "Podés reclamar por las lesiones sufridas como acompañante en un accidente de tránsito. Consultanos para más información.",
+    linkText: "Saber más",
+    link: "#faq"
+  },
+  {
+    title: "Peatón atropellado",
+    image: "images/accident9.png",
+    description: "Los peatones y ciclistas son los más vulnerables. Si sufriste un accidente, podés reclamar por las lesiones. ¡Consultanos!",
+    linkText: "Saber más",
+    link: "#faq"
+  },
+  {
+    title: "Accidente en transporte público",
+    image: "images/accident3.png",
+    description: "Si viajabas en transporte público y sufriste lesiones, tenés derecho a una indemnización. ¡Contactanos para más detalles!",
+    linkText: "Saber más",
+    link: "#faq"
+  },
+  {
+    title: "¿No llevabas casco?",
+    image: "images/accident6.png",
+    description: "A pesar de no llevar casco, podés reclamar una indemnización justa. Contactanos y te asesoraremos a la brevedad.",
+    linkText: "Saber más",
+    link: "#faq"
+  },
+  {
+    title: "¿No tenías seguro o registro de conducir?",
+    image: "images/accident7.png",
+    description: "Aunque no tuvieras seguro o registro al momento del accidente, aún podés reclamar una indemnización. ¡Te asesoramos!",
+    linkText: "Saber más",
+    link: "#faq"
+  }
+];
+
 ---
 
 <Layout>
@@ -50,8 +117,8 @@ import WpFloat from "../components/WpFloat.astro";
               Iniciá tu reclamo GRATIS, FÁCIL Y RÁPIDO con el asesoramiento
               especializado de nuestro equipo interdisciplinario de abogados y
               peritos accidentológicos. Más de 10 años de experiencia, seriedad
-              y responsabilidad nos avalan. Solo cobramos al final, si vos
-              ganás. ESTAMOS PARA AYUDARTE.
+              y responsabilidad nos avalan. <span class="text-primary dark:text-primary select-text font-bold">Solo cobramos al final, si vos
+              ganás.</span>
             </p>
             <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
               <a
@@ -80,209 +147,27 @@ import WpFloat from "../components/WpFloat.astro";
     </section>
 
     <section>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:px-20"
-      >
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident2.png"
-            />
-
-          </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              ¿Sufriste un Accidente de Tránsito?
-            </div>
-            <p class="text-gray-500 text-sm">
-              Si al conducir tu vehículo como dueño o usuario del mismo sufriste
-              un accidente de tránsito por culpa de otro conductor de todos los
-              daños que hayas sufrido, tanto sean daños físicos como daños al
-              vehiculo.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident5.png"
-            />
-
-          </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              ¿Tuviste Lesiones?
-            </div>
-            <p class="text-gray-500 text-sm">
-              En el caso de haber lesionados, te recomendamos que llames a una
-              ambulancia y a la Policía. Caso contrario, es indispensable que
-              recibas atención médica a la brevedad (por más que consideres que
-              sean golpes leves); así recibirás atención y tendrás constancia de
-              haber pasado por una guardia.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident8.png"
-            />
-
-          </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              ¿Quién tuvo la culpa del accidente?
-            </div>
-            <p class="text-gray-500 text-sm">
-              Determinar quién provocó el siniestro puede no ser tarea sencilla,
-              ya que cada accidente tiene sus particularidades; por lo que te
-              aconsejamos que nos consultes así te asesoramos SIN COSTO! Es
-              importante que nos contactes lo antes posible ya que ESTAMOS PARA
-              AYUDARTE..
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident1.png"
-            />
-
-          </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              Accidente de moto
-            </div>
-            <p class="text-gray-500 text-sm">
-              Todo motociclista y acompañante tiene derecho a una justa
-              indemnización por las lesiones sufridas en un accidente de
-              tránsito. En AJI somos especialistas en indemnizaciones por
-              accidentes de tránsito y ¡podemos ayudarte!
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident4.png"
-            />
-
-          </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              ¿ibas de acompañante y sufriste alguna lesión?
-            </div>
-            <p class="text-gray-500 text-sm">
-              Podés reclamar una indemnización por las lesiones sufridas en un
-              accidente de tránsito a todos los conductores participantes en el
-              siniestro, y a sus aseguradoras.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident9.png"
-            />
-
-          </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              Peatón atropellado
-            </div>
-            <p class="text-gray-500 text-sm">
-              Los peatones y los ciclistas son los más vulnerables en todo
-              accidente de tránsito, y por ende suelen llevarse la peor parte;
-              sufriendo lesiones de gravedad e incluso, muchas veces, el
-              fallecimiento. Si fuiste víctima de un accidente de tránsito como
-              peatón o ciclista CONSULTANOS!
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident3.png"
-            />
-
-          </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              Accidentes en transporte público
-            </div>
-            <p class="text-gray-500 text-sm">
-              Si viajabas en colectivo, subte, tren o taxi y sufriste un
-              accidente de tránsito con lesiones, merecés una justa reparación.
-              Para obtener la mejor indemnización y en el mejor tiempo posible
-              contactáte con nosotros por cualquiera de nuestros canales de
-              comunicación.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident6.png"
-            />
-            <div
-              class="absolute bottom-0 right-0 bg-gray-800 text-white px-2 py-1 m-2 rounded-md text-xs"
-            >
-              3 min read
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8 md:px-8 sm: px-8 ">
+        <!-- Mapea las tarjetas a partir de los datos -->
+        {cardData.map((card) => (
+          <div class="max-w-xs flex flex-col bg-white border border-t-4 border-t-primary shadow-sm rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:border-primary dark:shadow-neutral-700/70">
+            <img class="w-full h-48 object-cover rounded-t-xl" src={card.image} alt={card.title} />
+            <div class="p-4 md:p-5 flex flex-col flex-1">
+              <h3 class="text-lg font-bold text-gray-800 dark:text-white">{card.title}</h3>
+              <p class="mt-2 text-gray-500 dark:text-neutral-400 flex-grow">{card.description}</p>
+              <a class="mt-4 inline-flex items-center gap-x-1 text-sm font-semibold text-primary hover:text-primary hover:underline focus:underline" href={card.link}>
+                {card.linkText}
+                <svg class="shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              ¿No llevabas casco?
-            </div>
-            <p class="text-gray-500 text-sm">
-              Es factible reclamar una indemnización justa a pesar de que al
-              momento del accidente no llevaras puesto el casco reglamentario.
-              Si ese fue tu caso, contactáte con nosotros y te responderemos a
-              la brevedad.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-          <div class="relative">
-            <img
-              class="w-full h-48 object-cover"
-              src="images/accident7.png"
-            />
-            <div
-              class="absolute bottom-0 right-0 bg-gray-800 text-white px-2 py-1 m-2 rounded-md text-xs"
-            >
-              3 min read
-            </div>
-          </div>
-          <div class="p-4">
-            <div class="text-lg font-medium text-gray-800 mb-2">
-              ¿No tenías seguro o registro de conducir al ocurrir el accidente?
-            </div>
-            <p class="text-gray-500 text-sm">
-              A pesar de haber incurrido en estas faltas de tránsito al momento
-              del siniestro podés reclamar una indemnización. Para ello
-              contactános para recibir el mejor asesoramiento.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
+    
+    
 
 
     <section id="faq">
@@ -297,8 +182,8 @@ import WpFloat from "../components/WpFloat.astro";
             Preguntas Frecuentes
           </p>
         </div>
-        <ul class="basis-1/2">
-          <li>
+        <ul class="basis-1/2 text-gray-600">
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -372,7 +257,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -428,7 +313,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -470,7 +355,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -531,7 +416,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -583,7 +468,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -630,7 +515,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -680,7 +565,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -727,7 +612,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -767,7 +652,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -815,7 +700,7 @@ import WpFloat from "../components/WpFloat.astro";
               </div>
             </div>
           </li>
-          <li>
+          <li class="hover:text-white">
             <button
               class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
               aria-expanded="false"
@@ -907,7 +792,7 @@ import WpFloat from "../components/WpFloat.astro";
 
               <a
                 href="https://wa.me/5491157213143"
-                class="mt-8 inline-block rounded-full bg-green-500 px-12 py-3 text-lg font-bold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                class="mt-8 inline-block rounded-full bg-primary px-12 py-3 text-lg font-bold text-white transition hover:bg-[#A08125] focus:outline-none focus:ring focus:ring-yellow-400"
               >
                 Consultanos por WhatsApp
               </a>

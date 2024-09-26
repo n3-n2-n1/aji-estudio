@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Container from "../components/Container.astro"
+import Stats from "../components/Stats.astro"
+import FormContaxt from "../components/FormContaxt.astro"
 ---
 
 
@@ -72,14 +74,17 @@ import Container from "../components/Container.astro"
                   <div
                     class="mx-auto max-w-lg lg:mx-0 ltr:lg:text-left rtl:lg:text-right"
                   >
-                    <h2 class="text-3xl font-bold sm:text-4xl text-white">
+                    <h2 class="text-3xl font-bold sm:text-4xl text-white pb-8">
                       Quienes somos
                     </h2>
+                    <span class="text-2xl py-8 text-white">
+                      Dr Juan Alfaro
+                    </span >
       
                     <p class="mt-4 text-md text-gray-300">
-                        El <b>Dr. Juan Alfaro</b> es un abogado que se ha formado en el área de seguros en varias compañías aseguradoras y estudios de primera línea.
-                        Se define como un amante del derecho por la diversidad enorme de campos de aplicación que tiene la labor jurídica.
-                        Lleva casi <b>20 años de experiencia en la profesión</b> en los que se ha desempeñado en diversas áreas, desde la gestión de siniestros y juicios tanto de parte actora como demandada, hasta el asesoramiento comercial. 
+                        <b>Dr. Juan Alfaro</b> es un abogado que se ha formado en el área de seguros en varias compañías aseguradoras y estudios de primera línea.
+                        Se define como un amante del derecho por la diversidad enorme de campos de aplicación que tiene la labor jurídica.</br>
+                        Lleva casi <b>20 años de experiencia en la profesión</b> en los que se ha desempeñado en diversas áreas, desde la gestión de siniestros y juicios tanto de parte actora como demandada, hasta el asesoramiento comercial.</br>
                         En los últimos años se ha enfocado principalmente en perfeccionar sus conocimientos en Responsabilidad Civil y ha adquirido un gran expertise en Mala Praxis Médica Profesional. 
                         Actualmente lidera el área de Responsabilidad Civil Profesional en una prestigiosa compañía de seguros.
                     </p>
@@ -92,11 +97,14 @@ import Container from "../components/Container.astro"
                     </a>
                   </div>
                   <div>
-                    <img class="w-72"src="./logo.svg" alt="">
+                    <img class="w-72 shadow-lg rounded-full drop-shadow-lg"src="images/aji-face.png" alt="">
                   </div>
                 </div>
               </div>
             </section>
+
+            <Stats />
+            <FormContaxt />
           </section>
       
     </Container>
